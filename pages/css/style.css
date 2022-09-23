@@ -35,6 +35,9 @@ body, html {
 a, a:hover, a:active, a:visited {
     color: var(--bs-pink);
     text-decoration: none;
+}
+
+a.i {
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
