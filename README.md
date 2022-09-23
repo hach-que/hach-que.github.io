@@ -1,0 +1,1 @@
+This is the website located at https://junerhodes.au. Stored on GitHub so that it'll remain online regardless of anything else. If https://junerhodes.au is no longer working, you can try https://hach-que.github.io instead.
