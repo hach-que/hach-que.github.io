@@ -64,11 +64,28 @@
 
           <!--
             This page is a work-in-progress. The following items are still yet to be added:
+            
+            - Unreal Engine Linter (Mar 2021, dropped in favour of clang-tidy)
+            - configstore (2019)
+            - netcode.io for browsers
+            - gcloud-pipeline-library
+            - GameTest (GitHub)
+            - micro-pubsub
+            - SteamProductDataImporter (GitHub, 2017)
+            - Omni (the shell written in PHP)
+            - Adder (Python-like language, 2011)
+            - AppTools packaging format for Linux (2010)
+            - Trust4, peer-to-peer DNS (2010)
+            - FlowGraph for WinForms (2013)
+            - GGJ 2013 game (https://github.com/hach-que/RedMeansGo)
+            - QuotaTracker (2012?)
+            - iView Alerts
             - TIGJam Australia 1 & 2
             - Unearth/Tychaia, include really old screenshots from TIGJam 1
             - Global Game Jam games going back to 2011
             - Winnitron AU (lots of good photos under )
             - DCPU-16 Toolchain
+            - Mir
             - Custom x86 Kernel work
             - ModBridge
             - RoketPack
@@ -120,6 +137,15 @@
             </div>
           </div>
           <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Oct</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start">Io Build Monitor</div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Internal Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>I built a build monitor to better visualise pipelines on GitLab. I intend to open source this at some point in the future.</p>
+              <video class="img-fluid rounded mb-0" style="border: solid 1px #ddd;" autoplay loop src="img/io.mp4"></video>
+            </div>
+          </div>
+          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://www.unrealengine.com/marketplace/en-US/product/matchmaking">Matchmaking</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Unreal Engine Plugin</div>
@@ -144,7 +170,7 @@
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://www.youtube.com/watch?v=kpncrgLltfE">Continuous Functional Testing in Unreal Engine and Kubernetes</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Lightning Talk at Technically Games 2021</div>
             <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
-              Learn how I built a continuous functional testing system at Redpoint to test the behaviour of the Matchmaking plugin at scale.
+              Learn how I built a continuous functional testing system at Redpoint to test the behaviour of the Matchmaking plugin at scale. The work covered in this talk was later <a href="https://src.redpoint.games/redpointgames/continuous-testing-for-unreal-engine">open sourced for anyone to use</a>.
             </div>
           </div>
           <div class="row my-3">
@@ -203,11 +229,27 @@
           <h4 class="mt-5 mb-2">2020</h4>
           <p class="mt-2 mb-4 text-start">In 2020, I started working on Unreal Engine plugins at my own company Redpoint Games. Distinct from Redpoint Games prior to 2019, this incarnation is just myself as a sole trader.</p>
           <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Dec</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://src.redpoint.games/redpointgames/cloud-framework">Cloud Framework for C#</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              For many years, this was an internal library I wrote and used to build websites like JamHost and the License Manager. It was open sourced in December 2020. It provides a lot of useful APIs for building ASP.NET Core applications with Google Cloud Datastore as the primary database.
+            </div>
+          </div>
+          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Sep</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://www.unrealengine.com/marketplace/en-US/product/eos-online-subsystem">EOS Online Subsystem</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Unreal Engine Plugin</div>
             <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
               Use Epic Online Services in your Unreal Engine game! This plugin provides an online subsystem for Epic Online Services.
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Aug</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://gitlab.com/redpointgames/custom-unetdriver-docs">Custom UNetDriver Docs</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Documentation</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              A guide I wrote on how to write your own custom UNetDriver implementations in Unreal Engine, since the netcode in Unreal is fairly complicated. This guide has since been archived and is no longer kept up-to-date.
             </div>
           </div>
           <div class="row my-3">
@@ -236,6 +278,15 @@
             </div>
           </div>
           <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Apr</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://gitlab.com/redpointgames/google-drive-migrator">Google Drive Migrator</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>I wrote this tool to migrate documents in from one Google Drive account to another. At the time I was using the legacy version of Google Workspace, and wanted to migrate all of the documents stored in Google Drive to a personal Google account, in case Google ever shutdown the legacy version of Workspace.</p>
+              Unfortunately you can't just change ownership of documents in a Workspace account to personal account, so this tool effectively does the "Make a Copy" operation, mirrors the sharing information, and then deletes the old copy from the Workspace account.
+            </div>
+          </div>
+          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://globalgamejam.org/2020/jam-sites/melbourne-global-game-jam">Melbourne Global Game Jam</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Event</div>
@@ -248,6 +299,14 @@
           <h4 class="mt-5 mb-2">2019</h4>
           <p class="mt-2 mb-4 text-start">In 2019, I working at Network Next. Of note, this is the only year that I did not attend Global Game Jam in Melbourne as I was in the United States at the time.</p>
 
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Dec</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start">Harmony</div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Unreleased Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              I wrote a bot that synchronised Discord and Twitch chat. I think at the time I intended to run this as a service for other people to use, but I eventually stopped working on it as I had no personal need for it.
+            </div>
+          </div>
           <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Oct</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://www.youtube.com/watch?v=HwrM6vlbdxQ">So you want to make a multiplayer game?</a></div>
@@ -301,6 +360,25 @@
           <p class="mt-2 text-start">In 2018, I was working with Josh and Liam on games at Redpoint Games. At this time Redpoint Games was a company with all three of us as directors. When Redpoint Games reformed in 2020, it was as a sole trader under myself only.</p>
           <p class="mb-4 text-start">This was the last year we pursued game development as a team. We were unsuccessful in obtaining funding for "Minute of Mayhem" from the local funding body Film Victoria, and we no longer had the financial runway to continue through to the next potential funding round.</p>
 
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Oct</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://gitlab.com/redpointgames/react-injectable">react-injectable</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>react-injectable is a library that makes it easier to dependency inject React contexts into components, while ensuring the TypeScript hinting is correct when using the wrapped components.</p>
+              This library was used heavily in the web frontend for HiveMP (see below), where developers could manage their projects.
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Aug</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://gitlab.com/redpointgames/UnityAutomaticLicensor">Unity Automatic Licensor</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>At least in 2018, you could not automatically license installations of Unity with Personal licenses. The only way to license a machine was to go through the first-run wizard interactively.</p>
+              <p>At the time I wrote this, I was doing builds in the cloud which meant that Unity itself needed to be installed on-demand. This project emulated the first-run wizard's calls to the API to obtain a license for Unity and install it on the machine.</p>
+              I don't remember what I was actually running Unity for though; the last game I wrote using Unity would have been in 2015, so I suspect this might have been related to some kind of Unity SDK for HiveMP.
+            </div>
+          </div>
           <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jul</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start">Minute of Mayhem</div>
@@ -586,6 +664,19 @@
           <h4 class="mt-5 mb-2">2013</h4>
           <p class="mt-2 mb-4 text-start">In 2013, I did my industry placement at PageUp People. Industry placement was a program in my university course at Swinburne where you would be employed at a software development company for a year of your degree.</p>
 
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Oct</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/RedpointGames/Stolen-Stars">Stolen Stars</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Role Playing Tool</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>This was a little online tool that I wrote for a sci-fi table top role playing game that a few friends and I were running. Players could write journal entries between sessions and planets and various locations could be tracked.</p>
+              <p>The long term idea was that multiple groups of players could be using the same online system for their sessions, and build off the lore that other groups have written.</p>
+              <img class="img-fluid rounded mb-3" src="/history/img/stolenstars1.png" style="border: solid 1px #ddd;" title="The login screen for Stolen Stars." alt="The login screen for Stolen Stars." />
+              <img class="img-fluid rounded mb-3" src="/history/img/stolenstars3.png" style="border: solid 1px #ddd;" title="One of the character sheets from the game." alt="One of the character sheets from the game." />
+              <p>More screenshots are available here: <a href="/history/img/stolenstars1.png" target="_blank">1</a> <a href="/history/img/stolenstars2.png" target="_blank">2</a> <a href="/history/img/stolenstars3.png" target="_blank">3</a> <a href="/history/img/stolenstars4.png" target="_blank">4</a> <a href="/history/img/stolenstars5.png" target="_blank">5</a> <a href="/history/img/stolenstars6.png" target="_blank">6</a></p>
+              I open sourced this in September 2016 in an effort to open source my earlier work. As part of this, I did a little restructuring so that it could work as a Docker container.
+            </div>
+          </div>
           <div class="row my-3" style="color: red;">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jul 2013 &raquo; Jan 2020</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/Protobuild/Protobuild">Protobuild</a></div>
@@ -733,7 +824,7 @@
               <p>To emphasize the context in which this software was developed:</p>
               <ul>
                 <li>It is so old that source control history only starts in 2010. It would have initially been stored in Subversion, before moving to Mercurial. I'm not sure it was ever developed in Git; I suspect Google Code might have converted the repository when they exported it to GitHub after Google Code closed down.</li>
-                <li>For the first few years of development, Unity wasn't even available for independent game developers to make 3D games in. In fact, the release of Unity as a low-cost 3D game engine is what killed the development of this engine once Unity was made freely available to developers. If I remember correctly, the original audience for this engine were game developers who wanted to go beyond what Game Maker was capable of; once Unity released their free tier there was no longer a market for the engine.</li>
+                <li>For the first few years of development, Unity wasn't available for independent game developers to make 3D games in. The release of Unity as a low-cost 3D game engine is what killed the development of this engine once it was made freely available to developers. If I remember correctly, the original audience for this engine were game developers who wanted to go beyond what Game Maker was capable of; once Unity released their free tier there was no longer a market for the engine.</li>
                 <li>I think the IDE started development in 2010. It was later repurposed for the MOAI game engine (which I did some contracting work for in 2011) but was never released.</li>
               </ul>
               <p>I've included some screenshots from the Wayback Machine below. Images link to the Wayback Machine capture of the page. The first image is from December 2007.</p>
