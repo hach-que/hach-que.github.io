@@ -65,18 +65,6 @@
           <!--
             This page is a work-in-progress. The following items are still yet to be added:
             
-            - Unreal Engine Linter (Mar 2021, dropped in favour of clang-tidy)
-            - configstore (2019)
-            - netcode.io for browsers
-            - gcloud-pipeline-library
-            - GameTest (GitHub)
-            - micro-pubsub
-            - SteamProductDataImporter (GitHub, 2017)
-            - Omni (the shell written in PHP)
-            - Adder (Python-like language, 2011)
-            - AppTools packaging format for Linux (2010)
-            - Trust4, peer-to-peer DNS (2010)
-            - FlowGraph for WinForms (2013)
             - GGJ 2013 game (https://github.com/hach-que/RedMeansGo)
             - QuotaTracker (2012?)
             - iView Alerts
@@ -208,6 +196,14 @@
             </div>
           </div>
           <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://gitlab.com/redpointgames/unreal-engine-linter">Unreal Engine Linter</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              A very trivial C# program that used libclang to check for logical errors in Unreal Engine C++ code. This was superseded by clang-tidy for Unreal Engine (see above) which is far more powerful and uses all of the existing clang-tidy infrastructure.
+            </div>
+          </div>
+          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://moment.redpoint.games/">A Momentary Meeting</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Game Jam Game</div>
@@ -333,6 +329,20 @@
             </div>
           </div>
           <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Feb</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/RedpointGames/configstore">configstore</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>At Network Next we needed a way to dynamically manage configuration for all the microservices we had and ensure that configuration is kept up-to-date in all of them in near real-time.</p>
+              <p>configstore takes a schema defined in JSON and then:</p>
+              <ul>
+                <li>Provides a web administration panel where you can create entities and modify their settings.</li>
+                <li>Stores and retrieves data in Google Cloud Firestore. configstore itself is entirely stateless, making it trivial to run in a highly available setup.</li>
+                <li>Auto-generates a Go library for you that uses gRPC to watch for configuration changes via the configstore service. The generated Go library provides strongly typed Go objects and keeps everything up-to-date in the microservice.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan 2019 &raquo; Feb 2020</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start">Network Next</div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Employment</div>
@@ -408,6 +418,23 @@
             <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
               <p>Dynamically instantiate sublevels in multiplayer games. Great for procedurally generated worlds!</p>
               I developed this plugin as part of Minute of Mayhem development, and it was the first plugin I released on the Unreal Engine Marketplace.
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Apr</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/RedpointGames/gcloud-pipeline-library">gcloud-pipeline-library for Jenkins</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              This library provided a <code>gcloud</code> pipeline step for Jenkins that loaded service account credentials in a temporary environment for build jobs. Instead of having to configure gcloud on the build agents manually, it lets you store and load account service account credentials in Jenkins instead.
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/RedpointGames/netcode.io-browser">Browser extensions for netcode.io</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>I wrote a browser extension that made the netcode.io APIs available to Javascript applications, allowing for secure UDP game traffic to be used on the web. It was intended to be a polyfill until browsers adopted the standard themselves, but that never happened.</p>
+              Since extensions don't work in mobile browsers, this project was abandoned in 2019.
             </div>
           </div>
           <div class="row my-3">
@@ -517,6 +544,15 @@
             </div>
           </div>
           <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/RedpointGames/GameTest">GameTest</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>GameTest is a framework for automated end-to-end testing of games. It is intended to take an almost blank slate VM, and simulate a user installing a game through Steam, verifying that the game installs and launches correctly. After that, you can specify custom test scripts to test other behaviour inside your game.</p>
+              I wrote GameTest so we could automatically test Dimension Jump and catch any missing dependencies that needed to be installed with the game via the Steam install scripts.
+            </div>
+          </div>
+          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://redpoint.itch.io/super-ball-brawlers">Super Ball Brawlers</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Game Jam Game</div>
@@ -536,10 +572,29 @@
               I was one of the technical organisers for Melbourne Global Game Jam 2017. It was hosted at Swinburne University in the ATC building.
             </div>
           </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/RedpointGames/SteamProductDataImporter">Steam Product Data Importer</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>I wrote a collection of Google Apps Scripts to pull analytics and finance data from the Steam partner portal automatically. We used this for Dimension Jump to pull wishlisting data from Steam into Google Sheets where we could then compare it with e.g. Google Analytics data.</p>
+              <img class="img-fluid rounded mb-3" style="border: solid 1px #ddd;" src="/history/img/spdi.png" title="A screenshot showing the Steam wishlist data being imported into Google Sheets." alt="A screenshot showing the Steam wishlist data being imported into Google Sheets." />
+              This was replaced with the HiveMP Analytics product, but HiveMP was later shut down in 2019.
+            </div>
+          </div>
 
           <h4 class="mt-5 mb-2">2016</h4>
           <p class="mt-2 mb-4 text-start">In 2016, I was working with Josh and Liam on games at Redpoint Games. We were working on Minute of Mayhem. This was also the last year that I worked at PageUp People before I pursued game development full-time at Redpoint Games.</p>
 
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Oct</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/RedpointGames/micro-pubsub">micro-pubsub</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>micro-pubsub is a lightweight Pub/Sub service. It's designed to be a replacement for Google Cloud Pub/Sub in environments where you are willing to trade scalability for no cost, such as development environments.</p>
+              <img class="img-fluid rounded mb-0" style="border: solid 1px #ddd;" src="/history/img/pubsub.png" title="A screenshot of the micro-pubsub statistics page." alt="A screenshot of the micro-pubsub statistics page." />
+            </div>
+          </div>
           <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://globalgamejam.org/2016/games/augmented-board-game">Augmented Board Game</a></div>
@@ -621,6 +676,15 @@
             </div>
           </div>
           <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Feb</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/hach-que/Omni">Omni</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>Omni was a shell (like Bash) written in PHP. This was as great of an idea as it sounds, and I had to write a PHP module in C++ to provide access to native terminal APIs that weren't available in PHP.</p>
+              At the time this was written, PowerShell was not available for Linux or macOS, so this was an attempt to bring some of the ideas of PowerShell over to Linux.
+            </div>
+          </div>
+          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://globalgamejam.org/2015/games/society">Society</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Game Jam Game</div>
@@ -693,6 +757,14 @@
               It included a linter based on StyleCop and a code coverage tool that would instrument assemblies.
             </div>
           </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Feb</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/hach-que/Redpoint.FlowGraph">FlowGraph for WinForms</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              I wrote a flow graph component for Windows Forms. We used this for our infinite procedural generation editor in Unearth, so we could easily customize how the level generation worked.
+            </div>
+          </div>
           <div class="row my-3" style="color: red;">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start">Melbourne Global Game Jam</div>
@@ -747,6 +819,14 @@
               <p>There is also <a href="https://www.youtube.com/watch?v=666wMwSx9xM">a YouTube video</a> of the gameplay, though it's not edited at all and has the framerate quality you'd expect from desktop recording in 2011.</p>
             </div>
           </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/hach-que/adder-lang">Adder language</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              I wrote a Python-like language that could be compiled down to assembly. This is one of my early experiments with writing compilers and it is very incomplete.
+            </div>
+          </div>
 
           <hr class="mt-5" />
           <h2>The Ancient Times</h2>
@@ -755,6 +835,25 @@
 
           <h4 class="mt-5 mb-2">2010</h4>
           <p class="mt-2 mb-4 text-start">In 2010, I took a gap year between the final year of high school and university. It was mostly spent developing Roket3D and running RoketGames (see earlier years for information on both of these).</p>
+
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Dec</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/hach-que/trust4">Trust4</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              I wrote a distributed peer-to-peer DNS service called Trust4. You would add trusted peers and it would serve domains on the <code>.p2p</code> domain extension. It was written in C#.
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jun</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a href="https://github.com/hach-que/apptools-dist">AppTools</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>I wrote a packaging format for Linux called AppTools that was designed to support side-by-side library installs and mount and run applications from self-contained packages. That is, you could download the self-executing package, run it, and the AppTools wrapper would take care of mounting the package to a temporary directory and running the application.</p>
+              <p>This project was eventually abandoned as I could not get the filesystem format stable, and the distribution I was writing it for (elementary OS) ended up basing their distribution on Ubuntu rather than using AppTools for packaging.</p>
+              These days Snap provides the self-contained packages idea that AppTools was pursuing.
+            </div>
+          </div>
 
           <h4 class="mt-5 mb-2">2009</h4>
           <p class="mt-2 mb-4 text-start">In 2009, I was in my final year of high school.</p>
