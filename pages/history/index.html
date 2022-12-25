@@ -87,9 +87,6 @@
           <!--
             This page is a work-in-progress. The following items are still yet to be added:
             
-            - DCPU-16 Toolchain
-            - Mir
-            - Custom x86 Kernel work
             - ModBridge
             - RoketPack
             - Dx: Distributed Extensions for .NET
@@ -424,7 +421,7 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/RVHq7W32_90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <p>
-                Following on from the prototype, we renamed it to Minute of Mayhem and started developing it from scratch in MonoGame using our own Protogame framework. I wrote a lot of features into Protogame throughout Minute of Mayhem's development in 2017 and 2018. A full feature list up until the retirement of the Protogame framework <a href="https://github.com/RedpointGames/Protogame#features">can be found on the GitHub page for Protogame</a>, but it includes things like a full deferred shading pipeline, network replication and hot reloading to name a few.
+                Following on from the prototype, we renamed it to Minute of Mayhem and started developing it from scratch in MonoGame using our own Protogame framework. I wrote a lot of features into <a href="#protogame">Protogame</a> throughout Minute of Mayhem's development in 2017 and 2018. A full feature list up until the retirement of the Protogame framework <a href="https://github.com/RedpointGames/Protogame#features">can be found on the GitHub page for Protogame</a>, but it includes things like a full deferred shading pipeline, network replication and hot reloading to name a few.
               </p>
               <img class="img-fluid rounded mb-3" src="/history/img/minute-of-mayhem-protogame.png" title="A screenshot of what Minute of Mayhem looked like prior to switching to Unreal Engine. The user interface is not shown." alt="A screenshot of what Minute of Mayhem looked like prior to switching to Unreal Engine. The user interface is not shown." />
               <p>
@@ -584,7 +581,7 @@
               <div class="video-container my-3">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/q-GHIrtywz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              This was <a href="https://globalgamejam.org/2017/games/super-ball-brawlers">made at Global Game Jam 2017</a>, with Josh Harvey, Liam Alkamraikhi, Abby Phillips, Andrew Kasapidis and Kevin Powe. This is probably the last game I ever built in the Protogame framework before moving to Unreal Engine.
+              This was <a href="https://globalgamejam.org/2017/games/super-ball-brawlers">made at Global Game Jam 2017</a>, with Josh Harvey, Liam Alkamraikhi, Abby Phillips, Andrew Kasapidis and Kevin Powe. This is probably the last game I ever released that was built in the <a href="#protogame">Protogame</a> framework before moving to Unreal Engine.
             </div>
           </div>
           <div class="row my-3">
@@ -725,10 +722,39 @@
               I was one of the technical organisers for Melbourne Global Game Jam 2015. It was hosted at Swinburne University in the ATC building.
             </div>
           </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jul 2012 &raquo; Jan 2015</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="unearth"></a><a href="https://medium.com/@hq/an-unsuccessful-game-two-and-a-half-years-in-reflection-8c29dad26f8c" target="_blank">Unearth (also known as Tychaia)</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Unreleased Game</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>This was the first big game project I worked on, and I developed it with Josh Harvey and later Joshua Bradbury. Development started as an experimental project at TIGJam Australia 2012. Because I was arguably still new to game development and had no idea of scope or planning, this was a multiplayer procedurally generated RPG.</p>
+              <p>There were a lot of mistakes made during the development of this project, and it was eventually cancelled in 2015 after failing to receive any meaningful feedback through the IndieCade judging process.</p>
+              <p>I wrote a <a href="https://medium.com/@hq/an-unsuccessful-game-two-and-a-half-years-in-reflection-8c29dad26f8c" target="_blank">reflection piece</a> on the project in early 2015 that gives more of the history and background of the project, though I haven't read it in a long time so there might be statements in there I no longer stand by.</p>
+              <p>Of note, this is the project that I first learnt how to write multiplayer / game networking code for, which would be important later on in my career.</p>
+              <p>Here is the last real video that we made of the game, when it was still in pre-alpha:</p>
+              <div class="video-container my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/oibAPUHUoF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <p>Here is an extremely early screenshot of the game back when it was called Tychaia (probably not too soon after TIGJam Australia 2012):</p>
+              <img class="img-fluid rounded mb-3" src="/history/img/unearth-01.png" title="A very early screenshot of Unearth (then known as Tychaia)." alt="A very early screenshot of Unearth (then known as Tychaia)." />
+            </div>
+          </div>
 
           <h4 class="mt-5 mb-2"><a name="2014"></a>2014</h4>
           <p class="mt-2 mb-4 text-start">In 2014, I was employed at PageUp People in a developer-operations role. I did try doing university part-time at the start of this year, but with employment as well it was too much and I deferred the rest of my final year university subjects to 2015.</p>
 
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Feb</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="mir"></a><a href="https://github.com/hach-que/Mir">Mir</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Game</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>Mir was intended to be an open source re-implementation of Mojang's space exploration game that used the <a href="#dcpu16">DCPU-16</a>, but I stopped working on it after about a month.</p>
+              <p>I managed to implement the ship editor, room editor and DCPU-16 emulation (using a third-party library), which you can see below:</p>
+              <div class="video-container my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PIPKPxc1KPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
           <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="perspective"></a><a href="https://globalgamejam.org/2014/games/perspective">Perspective</a></div>
@@ -827,23 +853,6 @@
             </div>
           </div>
           <div class="row my-3">
-            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jul 2012 &raquo; Jan 2015</strong></div>
-            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="unearth"></a><a href="https://medium.com/@hq/an-unsuccessful-game-two-and-a-half-years-in-reflection-8c29dad26f8c" target="_blank">Unearth (also known as Tychaia)</a></div>
-            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Unreleased Game</div>
-            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
-              <p>This was the first big game project I worked on, and I developed it with Josh Harvey and later Joshua Bradbury. Development started as an experimental project at TIGJam Australia 2012. Because I was arguably still new to game development and had no idea of scope or planning, this was a multiplayer procedurally generated RPG.</p>
-              <p>There were a lot of mistakes made during the development of this project, and it was eventually cancelled in 2015 after failing to receive any meaningful feedback through the IndieCade judging process.</p>
-              <p>I wrote a <a href="https://medium.com/@hq/an-unsuccessful-game-two-and-a-half-years-in-reflection-8c29dad26f8c" target="_blank">reflection piece</a> on the project in early 2015 that gives more of the history and background of the project, though I haven't read it in a long time so there might be statements in there I no longer stand by.</p>
-              <p>Of note, this is the project that I first learnt how to write multiplayer / game networking code for, which would be important later on in my career.</p>
-              <p>Here is the last real video that we made of the game, when it was still in pre-alpha:</p>
-              <div class="video-container my-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/oibAPUHUoF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <p>Here is an extremely early screenshot of the game back when it was called Tychaia (probably not too soon after TIGJam Australia 2012):</p>
-              <img class="img-fluid rounded mb-3" src="/history/img/unearth-01.png" title="A very early screenshot of Unearth (then known as Tychaia)." alt="A very early screenshot of Unearth (then known as Tychaia)." />
-            </div>
-          </div>
-          <div class="row my-3">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jul</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="tigjam2012"></a><a href="https://tigjam.com.au/2012/index.htm">TIGJam Australia 2012</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Event</div>
@@ -873,10 +882,44 @@
               <img class="img-fluid rounded mb-3" src="/history/img/oldmanbaby.png" title="A screenshot from Old Man Baby, the project whose codebase eventually became Protogame." alt="A screenshot from Old Man Baby, the project whose codebase eventually became Protogame." />
               <p>Protogame would go on to be used in no small number of projects that I developed, including Unearth (Tychaia), Minute of Mayhem and a decent chunk of the game jam games I worked on between 2012 and 2017.</p>
               <p>By the time most of my development work moved to Unreal Engine, Protogame had an impressive feature set for an open source game engine. A full feature list is available on the <a href="https://github.com/RedpointGames/Protogame#features">can be found on the GitHub page for Protogame</a>, but to give you an idea, it supported 2D &amp; 3D games, deferred lighting, components and transform hierarchy, physics, networking with replication and a UI system.</p>
+              <p>Towards the latter part of it's lifecycle, I started working on editors, including an experimental integration into MonoDevelop, but the editors never reached full maturity before Protogame was retired:</p>
+              <div class="video-container my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RXZv6n4wb5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="video-container my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TO7UxNKS5dQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
               <p>
                 Protogame also spawned a number of other open source projects, including Prototest, Protoinject and Protobuild, the latter of which was adopted upstream by MonoGame before it was eventually retirement in 2020.
               </p>
               <p>I stopped development on Protogame when we moved our projects to Unreal Engine.</p>
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Apr 2012 &raquo; Feb 2013</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="dcpu16"></a><a href="https://github.com/DCPUTeam/DCPUToolchain">DCPU-16 Toolchain</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>In early 2012, Mojang announced the development of a space exploration game where ships could be run programs on a virtual CPU, called the DCPU-16. This open source project implemented a toolchain that targeted the CPU architecture, with the intent that tools would be able to run inside the game itself on the CPU. This constraint meant that a lot of existing projects such as LLVM were not suitable for this task, so this was a "ground up" implementation of a toolchain.</p>
+              <img class="img-fluid rounded mb-3" src="/history/img/dcputoolchain.png" title="A screenshot of the emulator from the DCPU-16 Toolchain." alt="A screenshot of the emulator from the DCPU-16 Toolchain." />
+              <p>I couldn't find many screenshots of this project, but I did find an old <a href="https://youtu.be/G6ikNc4FhrA?t=121">tutorial video on YouTube</a> which shows a little bit of what development looked like.</p>
+              <p>I started the project, but many community members came onboard after only a month. I did a significant amount of the initial development on tools, with other community members improving what I'd written:</p>
+              <ul>
+                <li>Emulator</li>
+                <li>Assembler</li>
+                <li>Preprocessor</li>
+                <li>The initial C compiler which was written in C
+                  <ul>
+                    <li>This implementation was later replaced with an implementation by another community member, written in C++</li>
+                  </ul>
+                </li>
+                <li>Linker</li>
+                <li>Kernel ABIs and support for those ABIs in the assembler and linker</li>
+                <li>Debugger</li>
+                <li>Standard C library APIs</li>
+              </ul>
+              <p>I think the most interesting part of this project was implementing the linker; it gave me a hands on experience on how linkers really work for normal architectures, and why they are not able to produce useful error messages in a lot of cases.</p>
+              <p>This project was effectively abandoned when Mojang cancelled the development of the game that it was being written for. I later worked on an open source game called <a href="#mir">Mir</a> which used the DCPU-16, but was cancelled after a month of development.</p>
             </div>
           </div>
           <div class="row my-3">
@@ -900,6 +943,15 @@
               <p>A game project that I developed at university with other students, One Must Die was a first-person shooter where you have to vote off one team member each round. That team member would become the boss antagonist on the next round you play. It was developed in UDK over the course of one semester.</p>
               <img class="img-fluid rounded mb-3" src="/history/img/onemustdie-2011.png" style="border: solid 1px #ddd;" title="A screenshot of One Must Die." alt="A screenshot of One Must Die." />
               <p>There is also <a href="https://www.youtube.com/watch?v=666wMwSx9xM">a YouTube video</a> of the gameplay, though it's not edited at all and has the framerate quality you'd expect from desktop recording in 2011.</p>
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jul</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="kernel"></a><a href="https://github.com/hach-que/Kernel/">Custom x86 Kernel</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>In 2011 I followed a <a href="http://www.osdever.net/bkerndev/Docs/intro.htm" target="_blank">bunch of</a> <a href="http://www.jamesmolloy.co.uk/tutorial_html/6.-Paging.html" target="_blank">tutorials</a> on how Intel x86 kernels were written, and used those tutorials to implement my own kernel.</p>
+              <p>This was purely an exercise in learning how kernels work, but the implementation ended up on GitHub as an implementation for other people to learn from as well.</p>
             </div>
           </div>
           <div class="row my-3">
@@ -1121,9 +1173,6 @@
           <p class="mt-2 mb-4 text-start">This is an incomplete list of things that I haven't yet properly added to this page. I still need to go back and figure out when they were originally released and get screenshots, etc. for them:</p>
 
           <ul style="text-align: left;">
-            <li>DCPU-16 Toolchain</li>
-            <li>Mir (game)</li>
-            <li>Custom x86 Kernel</li>
             <li>ModBridge for Minecraft</li>
             <li>RoketPack</li>
             <li>Dx: Distributed Extensions for .NET</li>
