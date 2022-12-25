@@ -106,11 +106,25 @@
             function evaluatefilters() {
               let typesOn = new Set();
               let allChecked = true;
+              let checkedCount = 0;
               for (const cb of document.querySelectorAll("input[type=\"checkbox\"]")) {
                 if (cb.checked) {
                   typesOn.add(cb.getAttribute("name"));
+                  checkedCount++;
                 } else {
                   allChecked = false;
+                }
+              }
+              if (checkedCount === 1) {
+                // don't allow last option to be unticked
+                for (const cb of document.querySelectorAll("input[type=\"checkbox\"]")) {
+                  if (cb.checked) {
+                    cb.setAttribute("disabled", "disabled");
+                  }
+                }
+              } else {
+                for (const cb of document.querySelectorAll("input[type=\"checkbox\"]")) {
+                  cb.removeAttribute("disabled");
                 }
               }
               if (allChecked) {
