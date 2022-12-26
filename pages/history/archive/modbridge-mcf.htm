@@ -1,0 +1,2872 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js windows landscape" lang="en-us"><!--<![endif]--><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>[1.2.5] [WIP] [OpenSource] ModBridge - WIP Mods - Minecraft Mods -
+ Mapping and Modding: Java Edition - Minecraft Forum - Minecraft Forum </title>
+<meta name="description" content="To be honest, since 0x10c came out I haven't worked on this at all.  I've been focusing my attention on the DCPU-16 Toolchain (https://github.com/D...m/DCPUT...">
+<meta name="theme-color" content="#121212">
+
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://media.minecraftforum.net/avatars/0/1/635356669593325566.png">
+
+<link rel="next" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2">
+<link rel="canonical" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge">
+
+
+<link rel="stylesheet" href="modbridge-mcf_files/compiled_002.css">
+<link rel="stylesheet" href="modbridge-mcf_files/compiled.css">
+<link rel="stylesheet" type="text/css" href="modbridge-mcf_files/custom-css.css">
+
+
+</head>
+<body class="site  site-minecraftforum site-www body-forum body-forum-threaddetails show-ads user-anonymous lang-en site-lang-en template-none skin-light-on-dark responsive-enabled" data-user-lang="1">
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-592R6HS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<noscript class="b-noscript">
+        <p><i class="b-noscript-icon"></i> This site works best with JavaScript enabled. Please enable JavaScript to get the best experience from this site.</p>
+    </noscript>
+
+<div id="site" class="fixed single-column">
+<div id="site-main" style="margin-bottom: -535px !important">
+
+<div class="netbar">
+<a class="netbar-left netbar-help" href="http://www.minecraftforum.net/meta/support">Help</a>
+<a href="https://www.minecraftforum.net/login?returnUrl=%2fforums%2fmapping-and-modding-java-edition%2fminecraft-mods%2fwip-mods%2f1440298-1-2-5-wip-opensource-modbridge" id="login-link" class="netbar-signin netbar-right">Sign In/Register</a>
+</div>
+
+<header class="main" role="banner">
+<div class="page-region p-header p-header-c">
+<h1 class="logo"><a class="title" href="https://www.minecraftforum.net/">Minecraft Forums</a></h1>
+<div class="page-block p-header-hub">
+<form class="p-header-search" action="/search" method="get" novalidate="novalidate"><input name="search" type="search" placeholder="Search Minecraft Forums"> <input type="submit" value=" "><a class="tip advanced-search-link" title="Advanced Search" href="http://www.minecraftforum.net/forums/search">Advanced Search</a></form>
+</div>
+<nav class="main p-nav p-nav-a j-sticky" role="navigation">
+<ul class="b-list b-list-a b-list_float">
+<li id="nav-news" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/" class="">
+<span class="b-list-label">
+News
+</span>
+</a>
+</li>
+<li id="nav-rules" class="  b-list-item p-nav-item" title="Minecraft Forum Rules &amp; Information">
+<a href="https://www.minecraftforum.net/meta/rules" class="">
+<span class="b-list-label">
+Rules
+</span>
+</a>
+</li>
+<li id="nav-forum" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/forums" class="">
+<span class="b-list-label">
+Forum
+</span>
+</a>
+</li>
+<li id="nav-chat" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/meta/chat" class="">
+<span class="b-list-label">
+Chat
+</span>
+</a>
+</li>
+<li id="nav-mods" class="  selected b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods" target="_blank" rel="noopener" class="">
+<span class="b-list-label">
+Mods
+</span>
+</a>
+</li>
+<li id="nav-maps" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/maps" class="">
+<span class="b-list-label">
+Maps
+</span>
+</a>
+</li>
+<li id="nav-resource-packs" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/resource-packs" class="">
+<span class="b-list-label">
+Resource Packs
+</span>
+</a>
+</li>
+<li id="nav-mc-station" class="  b-list-item p-nav-item">
+<a href="https://minecraftstation.com/" class="">
+<span class="b-list-label">
+MC Station
+</span>
+</a>
+</li>
+<li id="nav-free-minecraft-server-hosting" class=" apxNav sponsored b-list-item p-nav-item">
+<a rel="sponsored" href="https://scalacube.com/p/_free_minecraft_server_hosting/minecraftforum/menu_free" class="">
+<span class="b-list-label">
+Free Minecraft Server Hosting
+</span>
+</a>
+</li>
+</ul>
+<a data-ga-click-event-tracking-category="Desktop View" id="responsive-topnav-button" class="rs-link rs-link-to-desktop">Desktop View</a>
+</nav>
+</div>
+<i class="menu-button"></i><i class="search-button"></i></header>
+
+<section class="ad-container">
+<div class="ad-bin">
+<div class="xt-placement xt-badge atf-ad-badge">
+</div>
+<div class="xt-placement xt-leaderboard atf-ad-leaderboard">
+<div id="cdm-zone-01"></div>
+</div>
+</div>
+</section>
+
+<section class="atf" role="complementary"></section>
+<div class="container">
+<div id="content" class="main content-container">
+<section class="primary-content" role="main">
+<div class="page-block ">
+
+<nav class="b-breadcrumb b-breadcrumb-a">
+
+<ul class="b-breadcrumb-wrapper" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="1">
+<a href="https://www.minecraftforum.net/" rel="up" itemprop="item"><span itemprop="name">Home</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="2">
+<a href="https://www.minecraftforum.net/forums/" rel="up" itemprop="item"><span itemprop="name">Minecraft Forum</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="3">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition" rel="up" itemprop="item"><span itemprop="name">Mapping and Modding: Java Edition</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+ <meta itemprop="position" content="4">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods" rel="up" itemprop="item"><span itemprop="name">Minecraft Mods</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="5">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods" rel="up" itemprop="item"><span itemprop="name">WIP Mods</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="6">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge" rel="up" itemprop="item"><span itemprop="name">[1.2.5] [WIP] [OpenSource] ModBridge</span></a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="p-forum p-forum-a">
+<div class="p-comments p-comments-b forum-posts" data-id="1440298" data-show-deleted-comments="false">
+
+
+<header class="h2 caption-threads no-sub with-nav">
+
+<ul class="user-actions  user-actions-threads b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-search u-dropDown">
+<a href="https://www.minecraftforum.net/forums/search" class="">
+<i class="u-icon u-icon-search"></i>
+<span class="label">Search
+</span>
+</a>
+<ul class="u-dropDownMenu">
+<li id="nav-search-all-forums" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/forums/search" class="">
+<span class="b-list-label">
+Search all Forums
+</span>
+</a>
+</li>
+<li id="nav-search-this-forum" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/forums/search?search-forum-id=3120" class="">
+<span class="b-list-label">
+Search this Forum
+</span>
+</a>
+</li>
+<li id="nav-search-this-thread" class="  b-list-item p-nav-item">
+<a href="https://www.minecraftforum.net/forums/search?search-thread-id=1440298" class="">
+<span class="b-list-label">
+Search this Thread
+</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="user-action b-userAction-item user-action-tools u-dropDown">
+<a href="" class="">
+<i class="u-icon u-icon-tools"></i>
+<span class="label">Tools
+</span>
+</a>
+<ul class="u-dropDownMenu">
+<li id="nav-jump-to-forum" class=" jump-to-forum b-list-item p-nav-item" data-title="Jump to Forum">
+<a href="https://www.minecraftforum.net/forums/jump" class="modal-link no-refresh j-jump-forum-sub" data-title="Jump to Forum">
+<span class="b-list-label">
+Jump to Forum
+</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2>[1.2.5] [WIP] [OpenSource] ModBridge</h2>
+
+</header>
+
+ <div id="mobile-forum-thread-actions">
+<div id="mobile-navigate-thread">
+<div class="b-pagination b-pagination-a">
+<ul class="b-pagination-list paging-list j-tablesorter-pager j-listing-pagination" data-viewstate="" style="">
+<li class="b-pagination-item pagination-off"><a rel="prev">|&lt;&lt;</a></li><li class="b-pagination-item pagination-off"><a rel="prev">&lt;</a></li><li class="b-pagination-item">
+<select id="mobile-comments-jump" onchange="window.location.href=this.value"><option selected="selected" value="/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge">1</option><option value="/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2">2</option><option value="/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=3">3</option></select>
+</li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2" rel="next" data-next-page="">&gt;</a></li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=3" rel="prev">&gt;&gt;|</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div class="listing-container listing-container-ul">
+<div class="listing-header">
+<div class="b-pagination b-pagination-a pagination-top">
+<ul class="b-pagination-list paging-list j-tablesorter-pager j-listing-pagination" data-viewstate="" style="">
+<li class="b-pagination-item"><span class="b-pagination-item s-active active">1</span></li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2" class="b-pagination-item">2</a></li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=3" class="b-pagination-item">3</a></li><li class="b-pagination-item b-pagination-item-next"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2" rel="next" data-next-page="">Next</a></li>
+</ul>
+</div>
+</div><div class="listing-body">
+<ul class="listing listing-comments p-comments j-comment-listing" data-ajax-set-window-state="true" id="comments" data-row-selector="&gt;li" data-page-inline="False" data-scroll-inline="False">
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="1" id="c1" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652884" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=1">#1</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-02-26T11:28:15"><abbr class="tip standard-date standard-datetime" title="26/02/2012 5:28 AM" data-epoch="1330255695" time-processed="true">Feb 26, 2012</abbr></span>
+
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-1" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+<blockquote class="source-quote"><div class="quote-content"><div class="quote-body">To be honest, since 0x10c came out I haven't worked on this at all. I've been focusing my attention on the DCPU-16 Toolchain (<a href="https://www.minecraftforum.net/linkout?remoteUrl=https%253a%252f%252fgithub.com%252fDCPUTeam%252fDCPUToolchain" target="">https://github.com/D...m/DCPUToolchain</a>) instead.<br>
+<br>
+I can't say when or if I'll return working to this mod unfortunately. 
+However, ModBridge is open-source, so if someone wants to fork it and 
+work on it, they're free to do so.</div></div></blockquote><br>
+<br>
+<span style="font-size:large">ModBridge</span><br>
+<br>
+ModBridge lets you write Minecraft mods in C#. It has several advantages over developing native Java mods:<ul>
+<li><strong class="bbc">Forward Compatibility.</strong> C# mods are automatically forward compatible with new versions of Minecraft.</li><li><strong class="bbc">Security.</strong> C# mods are sandboxed so that they can't do nasty things on your computer. That means...</li><li><strong class="bbc">Automatic Updates.</strong>
+ Mods can be automatically updated from a central server, and when 
+joining multiplayer servers, mods can be automatically downloaded and 
+enabled.</li><li><strong class="bbc">Disabling / Enabling.</strong> Mods
+ can be disabled and enabled without restarting Minecraft. They are 
+isolated from the main client in such a way that they can safely be 
+deregistered and re-registered with the client (but only from the main 
+menu).</li><li><strong class="bbc">No ID Conflicts.</strong> Mods are assigned block IDs and item IDs from ModBridge and hence there are no ID conflicts when running mods.</li><li><strong class="bbc">No Decompiling.</strong> Mod developers don't need to decompile or reverse engineer the Minecraft client as they don't link against it.</li></ul>
+<span style="font-size:large">Website</span><br>
+<br>
+The ModBridge website at <a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252f" target="">http://modbridge.org</a>
+ now contains all of the up-to-date information, including source code 
+and downloads. Below are some quick links to access various parts of the
+ site:<ul>
+<li><a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252f" target=""><span style="font-size:large">Home</span></a></li><li><a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252fblog%252f" target=""><span style="font-size:large">Blog</span></a></li><li><a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252ffeatures%252f" target=""><span style="font-size:large">Features</span></a></li><li><a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fwww.opensource.org%252flicenses%252fmit-license.php" target=""><span style="font-size:large">License</span></a> (it's MIT!)</li><li><font style="color:#008000"><span style="font-size:large">&gt;&gt; </span></font><span style="font-size:large"><a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fadf.ly%252f6LoDo" target=""><font style="color:#008000">Download</font></a></span><font style="color:#008000"><span style="font-size:large"> &lt;&lt;</span></font></li><li><a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252fdevelop%252f" target=""><span style="font-size:large">Develop</span></a></li><li><a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252fmod-index" target=""><span style="font-size:large">Mod Index</span></a></li></ul>
+<span style="font-size:large">Screenshots</span><br>
+<br>
+Due to the active development, these screenshots may represent 
+out-of-date code; never-the-less they show ModBridge as a functioning 
+system:<br>
+<br>
+<a href="http://imgur.com/79QXw" target=""><img src="modbridge-mcf_files/79QXw.png" alt="" width="" height=""></a><br>
+<br>
+<a href="http://imgur.com/rjpmZ" target=""><img src="modbridge-mcf_files/rjpmZ.png" alt="" width="" height=""></a><br>
+<br>
+<img src="modbridge-mcf_files/Minecraft-ModBridge-Textures.png" alt="" width="" height=""><br>
+<br>
+<strong class="bbc">Questions? Thoughts? Suggestions? Leave them below.</strong>
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+<div class="p-comment-edited">
+Last edited by <a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member" style="">MCFUser263840</span></a>: <abbr class="tip standard-date standard-datetime" title="03/05/2012 3:45 PM" data-epoch="1336077937" time-processed="true">May 4, 2012</abbr>
+</div>
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li><li class="p-comments p-comments-b server-forum-after-comment-ad"><section class="ad-container"><div class="ad-bin"><div class="xt-placement"></div></div></section></li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-curse-premium comment-depth-0 comment-allows-rating" data-index="2" id="c2" data-surrogate-type="user" data-surrogate-id="6818661" data-author-id="6818661" data-id="26652885" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=2">#2</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-02-26T13:27:32"><abbr class="tip standard-date standard-datetime" title="26/02/2012 7:27 AM" data-epoch="1330262852" time-processed="true">Feb 27, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/addemod"><span itemprop="name">addemod</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/addemod"><span class="user user-role-curse-premium ">addemod</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/addemod" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/addemod/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=addemod" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-curse-premium">
+Curse Premium
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-curse-premium">
+<a href="https://www.minecraftforum.net/members/addemod">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357146693366504.png" itemprop="image" alt="View addemod's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">404: Member Not Found</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+4/19/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+426
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+addemod
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-2" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+SO AWESOME!!
+
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="3" id="c3" data-surrogate-type="user" data-surrogate-id="6958802" data-author-id="6958802" data-id="26652886" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=3">#3</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-02-26T14:34:31"><abbr class="tip standard-date standard-datetime" title="26/02/2012 8:34 AM" data-epoch="1330266871" time-processed="true">Feb 27, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/sashocku"><span itemprop="name">sashocku</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/sashocku"><span class="user user-role-registered-member ">sashocku</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/sashocku" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/sashocku/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=sashocku" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/sashocku">
+<img style="max-width: 140px" src="modbridge-mcf_files/635604944342626044.jpeg" itemprop="image" alt="View sashocku's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Mathematical Dessert</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+6/4/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+316
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+sashocku
+</span>
+</li>
+<li class="p-comment-statitem xbox">Xbox:
+<span class="postbit-item xbox">
+sashocku
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-3" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+mabey jeb should hire you on to make the gamemode api. :tongue.gif:
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-curse-premium comment-depth-0 comment-allows-rating" data-index="4" id="c4" data-surrogate-type="user" data-surrogate-id="6818661" data-author-id="6818661" data-id="26652887" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=4">#4</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-02-27T18:30:24"><abbr class="tip standard-date standard-datetime" title="27/02/2012 12:30 PM" data-epoch="1330367424" time-processed="true">Feb 28, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/addemod"><span itemprop="name">addemod</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/addemod"><span class="user user-role-curse-premium ">addemod</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/addemod" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/addemod/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=addemod" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-curse-premium">
+Curse Premium
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-curse-premium">
+<a href="https://www.minecraftforum.net/members/addemod">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357146693366504.png" itemprop="image" alt="View addemod's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">404: Member Not Found</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+4/19/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+426
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+addemod
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-4" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+Ey, when will it be released?? Really wanna try this :smile.gif:
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="5" id="c5" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652888" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=5">#5</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-02-29T11:13:39"><abbr class="tip standard-date standard-datetime" title="29/02/2012 5:13 AM" data-epoch="1330514019" time-processed="true">Feb 29, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-5" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+<blockquote class="source-quote"><div class="quote-content"><div class="quote-body"><div class="quote-source">Quote from <a class="quote-author" href="https://www.minecraftforum.net/comments/26652887">addemod</a></div><br>
+Ey, when will it be released?? Really wanna try this :smile.gif:<br>
+</div></div></blockquote><br>
+<br>
+Right now :smile.gif:<br>
+<br>
+Link is in the first post, along with details on how to get started.<br>
+<br>
+<strong class="bbc">Edits and Notes:</strong><br>
+<br>
+The spam filter seems to keep triggering when I edit the main post, so in the meantime:<br>
+<br>
+<ul>
+<li>You want to click "Last Successful Artifacts" on the download page and place all of those files in your mods/ folder.</li><li>The
+ example recipe for those not looking at the code is two dirt blocks 
+placed horizontally and will produce an example block instead of stone; 
+it is no longer the configuration shown in the screenshot.</li><li>When 
+exiting Minecraft, ensure that the mod hosting executable closes along 
+with it! Sometimes Minecraft terminates and this process doesn't 
+execute, which causing it to go into a spin loop while it waits for 
+input from a Minecraft instance that no longer exists. This'll be fixed 
+in a later version.</li></ul>
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+<div class="p-comment-edited">
+Last edited by <a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member" style="">MCFUser263840</span></a>: <abbr class="tip standard-date standard-datetime" title="29/02/2012 5:29 AM" data-epoch="1330514996" time-processed="true">Feb 29, 2012</abbr>
+</div>
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="6" id="c6" data-surrogate-type="user" data-surrogate-id="7137924" data-author-id="7137924" data-id="26652889" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=6">#6</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-04T11:32:52"><abbr class="tip standard-date standard-datetime" title="04/03/2012 5:32 AM" data-epoch="1330860772" time-processed="true">Mar 4, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/hansihe"><span itemprop="name">hansihe</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/hansihe"><span class="user user-role-registered-member ">hansihe</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/hansihe" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/hansihe/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=hansihe" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/hansihe">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357079070472560.jpg" itemprop="image" alt="View hansihe's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Zombie Killer</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Norway
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+1/1/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+198
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hansihe
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-6" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+Approved!
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+Maker of the <a href="http://www.minecraftforum.net/topic/986083-11-fancygui-22-soon-with-friends-list/" target="">FancyGUI</a> mod<br>
+Like this post? Click the little <img src="modbridge-mcf_files/add.png" alt="" width="" height=""> over there -&gt;&gt;
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="7" id="c7" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652890" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=7">#7</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-04T11:40:24"><abbr class="tip standard-date standard-datetime" title="04/03/2012 5:40 AM" data-epoch="1330861224" time-processed="true">Mar 4, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-7" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+ModBridge now has a website at <a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252f" target="">http://modbridge.org/</a>, including links to download, source code, a mod index and developer information.<br>
+<br>
+I'm going to update this topic on Tuesday (or sooner) to change around references to point people to there.<br>
+<br>
+Also, Minecraft 1.2.3 support is coming; I just need to provide the 
+build server with the new JARs and libraries (such as new versions of 
+ModLoader and MCP) and it should be good to go. I don't expect to have 
+to make changes to the source code, but we'll see how we go.
+
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="8" id="c8" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652891" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=8">#8</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-05T01:35:58"><abbr class="tip standard-date standard-datetime" title="04/03/2012 7:35 PM" data-epoch="1330911358" time-processed="true">Mar 5, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+ </span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-8" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+Alright I've cleaned everything up so it should all be consistent now.<br>
+<br>
+Just to let everyone know, I'm currently awaiting updates from 
+ModLoaderMP and MCForge before I can make this run on 1.2.3. I'm also 
+investigating ways that I can reduce reliance on third-parties for 
+updates.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="9" id="c9" data-surrogate-type="user" data-surrogate-id="6973528" data-author-id="6973528" data-id="26652892" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=9">#9</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-06T00:45:13"><abbr class="tip standard-date standard-datetime" title="05/03/2012 6:45 PM" data-epoch="1330994713" time-processed="true">Mar 6, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/Pikdome"><span itemprop="name">Pikdome</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/Pikdome"><span class="user user-role-registered-member ">Pikdome</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/Pikdome" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/Pikdome/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=Pikdome" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/Pikdome">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357151968501941.jpg" itemprop="image" alt="View Pikdome's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title deleted">Carpenter</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+4/25/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+55
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-9" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+Has somone alerted Jeb to your work?<br>
+<br>
+This looks great.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="10" id="c10" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652893" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=10">#10</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-06T19:47:19"><abbr class="tip standard-date standard-datetime" title="06/03/2012 1:47 PM" data-epoch="1331063239" time-processed="true">Mar 7, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-10" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+ModBridge is now 1.2.3 compatible. I've removed the dependency on 
+ModLoaderMP, instead opting to replace this with a functionally 
+equivalent system.<br>
+<br>
+When implementing MCForge, I'll apply patches that change it from using 
+ModLoaderMP to using our replacement instead so that I don't rely on 
+Flan's update process. Going forward this will allow our build server to
+ automatically build a functionally equivalent version of ModLoaderMP 
+for the current Minecraft version, regardless of where Flan is at with 
+updating his (our reimplementation is not made easy by the fact that 
+ModLoaderMP is not open-source).<br>
+<br>
+<blockquote class="source-quote"><div class="quote-content"><div class="quote-body"><div class="quote-source">Quote from <a class="quote-author" href="https://www.minecraftforum.net/comments/26652892">Pikdome</a></div><br>
+Has somone alerted Jeb to your work?<br>
+<br>
+This looks great.<br>
+</div></div></blockquote><br>
+<br>
+As far as I am aware, Jeb hasn't seen this.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+<div class="p-comment-edited">
+Last edited by <a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member" style="">MCFUser263840</span></a>: <abbr class="tip standard-date standard-datetime" title="06/03/2012 1:47 PM" data-epoch="1331063276" time-processed="true">Mar 7, 2012</abbr>
+</div>
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="12" id="c12" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652895" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=12">#12</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-07T05:25:57"><abbr class="tip standard-date standard-datetime" title="06/03/2012 11:25 PM" data-epoch="1331097957" time-processed="true">Mar 7, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-12" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+<blockquote class="source-quote"><div class="quote-content"><div class="quote-body"><div class="quote-source">Quote from <a class="quote-author" href="https://www.minecraftforum.net/comments/26652894">vegnagun1</a></div><br>
+Just after your personal opinion on this, is it worth trying to learn C#
+ after just managing to get my head around java? I'm a competant enough 
+modder but i'm not sure if i want to put the time in with many more 
+months of tutorials to try and find it out :/<br>
+<br>
+This looks absolutely amazing and i'm a huge fan of the forward 
+compatibility, but i know it'll entail alot more learning on my part DX<br>
+</div></div></blockquote><br>
+<br>
+C# is very similar to Java, in fact, it's basically Java with the naming
+ standards changed (so doSomething in Java is DoSomething in C#). 
+There's a lot of extra C# features such as events, delegates, 
+properties, etc. but you don't need to know how to use those in order to
+ use C#. At the very least, if you know Java, you will pick up any of 
+the extra bits very quickly.<br>
+<br>
+I suggest looking at some C# code examples and you'll find out just how closely it resembles Java.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="13" id="c13" data-surrogate-type="user" data-surrogate-id="7322237" data-author-id="7322237" data-id="26652896" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=13">#13</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-07T06:24:03"><abbr class="tip standard-date standard-datetime" title="07/03/2012 12:24 AM" data-epoch="1331101443" time-processed="true">Mar 7, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MrRandomnez"><span itemprop="name">MrRandomnez</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MrRandomnez"><span class="user user-role-registered-member ">MrRandomnez</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MrRandomnez" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MrRandomnez/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MrRandomnez" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MrRandomnez">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357240369877730.webp" itemprop="image" alt="View MrRandomnez's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Redstone Miner</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+8/4/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+611
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+MrRandomnez
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-13" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+YOU ARE SO AWESOME!
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><em class="bbc">'Far over the Misty Mountains cold, t</em><em class="bbc">o dungeons deep and caverns old,</em></div>
+<div class="iframe-center" style="text-align:center"><em class="bbc">We must away, ere break of day, t</em><em class="bbc">o seek our pale enchanted gold.'</em><img src="modbridge-mcf_files/kRE8e.jpg" alt="" width="" height=""></div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="14" id="c14" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652897" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=14">#14</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-07T11:16:45"><abbr class="tip standard-date standard-datetime" title="07/03/2012 5:16 AM" data-epoch="1331119005" time-processed="true">Mar 7, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-14" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+Alright, I've started putting the infrastructure in place for an 
+ABI-compatible version of ModLoader and ModLoaderMp that ModBridge will 
+use underlyingly, known as ModLoaderPlus. It's in the source code 
+repository now.<br>
+<br>
+Essentially this infrastructure will replace ModLoader and ModLoaderMp 
+in a backwards-compatible way, meaning that we don't need to wait for 
+Risugami or Flan to update their code. Better yet, this implementation 
+is open-source, so if there's any issues when a new version of Minecraft
+ comes out, people can work on patching it to work with the new version 
+straight away.<br>
+<br>
+In addition, I'm looking to see if there's a way to implement 
+ModLoaderPlus so that it remains backwards-compatible, but also allows 
+native mods to be enabled and disabled without restarting Minecraft, 
+similar to how C# mods are. However, it's impossible to offer 
+forwards-compatibility with native mods regardless of what is done, due 
+to the fact that ModLoaderPlus needs to be ABI-compatible with ModLoader
+ / ModLoaderMp at all times (so I still recommend writing mods in C# if 
+you want features other than enabling / disabling).<br>
+<br>
+If anyone wants to help with rewriting this infrastructure component, let me know via PM.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+<div class="p-comment-edited">
+Last edited by <a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member" style="">MCFUser263840</span></a>: <abbr class="tip standard-date standard-datetime" title="07/03/2012 5:19 AM" data-epoch="1331119140" time-processed="true">Mar 7, 2012</abbr>
+</div>
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-curse-premium comment-depth-0 comment-allows-rating" data-index="15" id="c15" data-surrogate-type="user" data-surrogate-id="6818661" data-author-id="6818661" data-id="26652898" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=15">#15</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-08T08:45:05"><abbr class="tip standard-date standard-datetime" title="08/03/2012 2:45 AM" data-epoch="1331196305" time-processed="true">Mar 8, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/addemod"><span itemprop="name">addemod</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/addemod"><span class="user user-role-curse-premium ">addemod</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/addemod" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/addemod/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=addemod" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-curse-premium">
+Curse Premium
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-curse-premium">
+<a href="https://www.minecraftforum.net/members/addemod">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357146693366504.png" itemprop="image" alt="View addemod's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">404: Member Not Found</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+4/19/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+426
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+addemod
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+ 
+<div id="forum-post-body-15" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+Bump for you man <img data-class="" src="modbridge-mcf_files/635356669596273706.webp" title=":)" alt=":)" border="0">
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="16" id="c16" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652899" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=16">#16</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-10T09:29:28"><abbr class="tip standard-date standard-datetime" title="10/03/2012 3:29 AM" data-epoch="1331371768" time-processed="true">Mar 10, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-16" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+The build server now produces both versions for ModLoader and 
+ModLoaderPlus. Note that ModLoaderPlus is still experimental and not 
+fully implemented, so it's likely to break native mod functionality (and
+ probably ModBridge itself).<br>
+<br>
+Follow the instructions at the <a href="https://www.minecraftforum.net/linkout?remoteUrl=http%253a%252f%252fmodbridge.org%252fdownload%252f" target="">download page</a> for more information on how to use the new versions of ModBridge.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="17" id="c17" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652900" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=17">#17</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-16T08:44:12"><abbr class="tip standard-date standard-datetime" title="16/03/2012 3:44 AM" data-epoch="1331887452" time-processed="true">Mar 16, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-17" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+ModLoaderPlus is now able to successfully act as a replacement ModLoader
+ for ModBridge. Note that there are still a lot of ModLoader APIs that 
+aren't implemented in ModLoaderPlus, so it'll still likely break a lot 
+of native mods.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="18" id="c18" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652901" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=18">#18</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-19T23:23:03"><abbr class="tip standard-date standard-datetime" title="19/03/2012 6:23 PM" data-epoch="1332199383" time-processed="true">Mar 20, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-18" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+ModBridge can now dynamically load textures from C# resources into 
+Minecraft for use as block textures as demonstrated in the screenshot:<br>
+<br>
+<img src="modbridge-mcf_files/Minecraft-ModBridge-Textures.png" alt="" width="" height=""><br>
+<br>
+Note that at this time, ModBridge loads all texture requests into slot 
+168, so technically it can only store one texture in Minecraft at a 
+time. Modifying this to use available slots however is a very simple 
+task of implementing the getUniqueSpriteIndex functionality in 
+ModLoaderPlus (and this should be done hopefully next weekend).<br>
+<br>
+After that is working, I'm going to look at modifying it so that there 
+is no limit on how many textures you want to load in, not even the limit
+ imposed by the default terrain.png's free slots. I know that some 
+native mods such as BuildCraft and IndustrialCraft already do this, but I
+ have to work out how they're using their own 256x256 images for block 
+textures first.<br>
+<br>
+Never-the-less, this is a pretty big step and brings ModBridge closer to being actually useful for developing mods! <img data-class="" src="modbridge-mcf_files/635356669595335315.webp" title=":D" alt=":D" border="0"><br>
+<br>
+<strong class="bbc">NOTE:</strong> There is not a build yet that 
+incorporates this functionality; I'll likely wait until I have 
+getUniqueSpriteIndex working first.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+<div class="p-comment-edited">
+Last edited by <a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member" style="">MCFUser263840</span></a>: <abbr class="tip standard-date standard-datetime" title="19/03/2012 6:28 PM" data-epoch="1332199729" time-processed="true">Mar 20, 2012</abbr>
+</div>
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="19" id="c19" data-surrogate-type="user" data-surrogate-id="6958802" data-author-id="6958802" data-id="26652902" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=19">#19</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-20T00:13:45"><abbr class="tip standard-date standard-datetime" title="19/03/2012 7:13 PM" data-epoch="1332202425" time-processed="true">Mar 20, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/sashocku"><span itemprop="name">sashocku</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/sashocku"><span class="user user-role-registered-member ">sashocku</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/sashocku" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/sashocku/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=sashocku" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/sashocku">
+<img style="max-width: 140px" src="modbridge-mcf_files/635604944342626044.jpeg" itemprop="image" alt="View sashocku's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Mathematical Dessert</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+6/4/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+316
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+sashocku
+</span>
+</li>
+<li class="p-comment-statitem xbox">Xbox:
+<span class="postbit-item xbox">
+sashocku
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-19" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+maybe you should get in contact with mojang seeing as you could help them with the modding api since you could add alot to it.
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="20" id="c20" data-surrogate-type="user" data-surrogate-id="7856113" data-author-id="7856113" data-id="26652903" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=20">#20</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-20T01:12:27"><abbr class="tip standard-date standard-datetime" title="19/03/2012 8:12 PM" data-epoch="1332205947" time-processed="true">Mar 20, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/plerer"><span itemprop="name">plerer</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/plerer"><span class="user user-role-registered-member ">plerer</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/plerer" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+ <span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/plerer/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=plerer" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/plerer">
+<img style="max-width: 140px" src="modbridge-mcf_files/default_large.webp" itemprop="image" alt="View plerer's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Zombie Killer</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+11/16/2010
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+176
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-20" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+Any way to make the plugin system work with normal java classes?
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+</div>
+</div>
+</div>
+</li>
+<li itemscope="" itemtype="http://schema.org/Comment" class="p-comments p-comments-b">
+<div class="j-comment p-comment-post forum-post comment comment-normal comment-user user-role-registered-member comment-depth-0 comment-allows-rating" data-index="21" id="c21" data-surrogate-type="user" data-surrogate-id="8486521" data-author-id="8486521" data-id="26652904" data-markup-type="3" data-parent-id="1440298" data-parent-type-id="14">
+<div class="mobile-profile-target"></div>
+<div class="mobile-share-target"></div>
+<div class="p-comment-header forum-post-header">
+<span class="p-comment-index post-index">
+<a class="j-comment-link" data-link-prompt="true" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?comment=21">#21</a>
+</span>
+<span class="p-comment-postdate post-date" itemprop="dateCreated" datetime="2012-03-20T01:27:25"><abbr class="tip standard-date standard-datetime" title="19/03/2012 8:27 PM" data-epoch="1332206845" time-processed="true">Mar 20, 2012</abbr></span>
+<i class="u-icon u-icon-info tip">
+<div class="tooltip-html">
+</div>
+</i>
+</div>
+<div class="j-comment-content forum-post-content p-comment-container expandable" data-related-button=".deleted-comment-button" processed="true">
+<div class="p-comment-user-background"></div>
+<div class="p-comment-user forum-post-info" itemscope="" itemtype="http://schema.org/Person" itemprop="creator">
+<div class="p-comment-micro-author">
+<a itemprop="url" href="https://www.minecraftforum.net/members/MCFUser263840"><span itemprop="name">MCFUser263840</span></a>
+</div>
+<span class="u-dropDown p-comment-username j-comment-username" title="">
+<a href="https://www.minecraftforum.net/members/MCFUser263840"><span class="user user-role-registered-member ">MCFUser263840</span></a>
+<ul class="user-actions  user-actions-forum-post-author-menu u-dropDownMenu b-userAction b-userAction-a covert-list">
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/members/MCFUser263840" class="" data-responsive-label="Profile" data-non-responsive-label="View User Profile">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">View User Profile
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item">
+<a href="https://www.minecraftforum.net/members/MCFUser263840/posts" class="">
+<i class="u-icon u-icon-"></i>
+<span class="label">View Posts
+</span>
+</a>
+</li>
+<li class="user-action b-userAction-item user-action-link-responsive">
+<a href="https://www.minecraftforum.net/private-messages/send?recipient=MCFUser263840" class="" data-responsive-label="Message" data-non-responsive-label="Send Message">
+<i class="u-icon u-icon-link-responsive"></i>
+<span class="label">Send Message
+</span>
+</a>
+</li>
+</ul>
+</span>
+<span class="p-comment-title username-role-registered-member">
+</span>
+<div class="p-comment-role-title">
+</div>
+<div class="p-comment-avatar">
+<div class="avatar avatar-140 user user-role-registered-member">
+<a href="https://www.minecraftforum.net/members/MCFUser263840">
+<img style="max-width: 140px" src="modbridge-mcf_files/635357118435575873.jpg" itemprop="image" alt="View MCFUser263840's Profile" onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';">
+</a>
+</div>
+</div>
+<ul class="p-comment-stats">
+<li class="p-comment-statitem forum-title normal">Tree Puncher</li>
+<li class="p-comment-statitem location">Location:
+<span class="postbit-item location">
+Australia
+</span>
+</li>
+<li class="p-comment-statitem join-date">Join Date:
+<span class="postbit-item join-date">
+3/12/2011
+</span>
+</li>
+<li class="p-comment-statitem posts">Posts:
+<span class="postbit-item posts">
+24
+</span>
+</li>
+<li class="p-comment-statitem minecraft">Minecraft:
+<span class="postbit-item minecraft">
+hachque
+</span>
+</li>
+<li>Member Details</li>
+</ul>
+</div>
+<div class="p-comment-wrapper comment-user-anonymous">
+
+<div class="p-comment-content forum-post-body-container">
+
+<div class="j-comment-body-container p-comment-body forum-post-body-content">
+
+<div id="forum-post-body-21" class="j-comment-body forum-post-body u-typography-format text" itemprop="text">
+<blockquote class="source-quote"><div class="quote-content"><div class="quote-body"><div class="quote-source">Quote from <a class="quote-author" href="https://www.minecraftforum.net/comments/26652903">plerer</a></div><br>
+Any way to make the plugin system work with normal java classes?<br>
+</div></div></blockquote><br>
+<br>
+ModLoaderPlus can give you the benefit of enable / disable for native 
+mods, but that's something users install and has no effect on your mod 
+writing (you just write against ModLoader / ModLoaderMP).<br>
+<br>
+Unfortunately there's no way to bring across any of the other features 
+to native mods since they link directly against Minecraft, which 
+naturally means they are not forward-compatible with new versions. Hence
+ if you want forward compatibility, you need to write your mod in C#.<br>
+<br>
+If you are working with an existing code base, you can pretty much copy 
+all of your existing classes straight into C#; you will need to correct 
+slight issues but as I mentioned before, Java and C# are very similar. 
+The only other thing you will need to change is updating your API calls,
+ since inside the C# hosting environment there are no ModLoader APIs 
+(things are done differently).
+</div>
+
+</div>
+</div>
+<div class="p-comment-notes">
+
+
+</div>
+<div class="j-comment-revisions-history comment-revisions-history" style="display:none">
+<span>Rollback Post to Revision</span>
+<select class="j-comment-revisions-select comment-revisions-select"></select>
+<span class="button j-comment-revisions-rollback comment-revisions-rollback">RollBack</span>
+<input type="submit" class="j-comment-revisions-cancel button comment-revisions-cancel" name="cancel-rollback" value="Cancel">
+</div>
+<div class="p-comment-sig ">
+<div class="iframe-center" style="text-align:center"><strong class="bbc"><a href="http://www.minecraftforum.net/topic/1058640-alpha001-wip-modbridge" target=""><span style="font-size:5px">ModBridge</span></a></strong><br>
+Write forwards-compatible mods in C#</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="alert no-results">To post a comment, please <a href="https://www.minecraftforum.net/login?returnUrl=%2fforums%2fmapping-and-modding-java-edition%2fminecraft-mods%2fwip-mods%2f1440298-1-2-5-wip-opensource-modbridge" class="j-login-link">login</a>.</li>
+</ul>
+</div>
+<div class="listing-footer">
+<div class="b-pagination b-pagination-a pagination-bottom">
+<ul class="b-pagination-list paging-list j-tablesorter-pager j-listing-pagination" data-viewstate="" style="">
+<li class="b-pagination-item"><span class="b-pagination-item s-active active">1</span></li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2" class="b-pagination-item">2</a></li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=3" class="b-pagination-item">3</a></li><li class="b-pagination-item b-pagination-item-next"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2" rel="next" data-next-page="">Next</a></li>
+</ul>
+</div>
+</div></div>
+</div>
+
+<div id="mobile-forum-thread-actions">
+<div id="mobile-navigate-thread">
+<div class="b-pagination b-pagination-a">
+<ul class="b-pagination-list paging-list j-tablesorter-pager j-listing-pagination" data-viewstate="" style="">
+<li class="b-pagination-item pagination-off"><a rel="prev">|&lt;&lt;</a></li><li class="b-pagination-item pagination-off"><a rel="prev">&lt;</a></li><li class="b-pagination-item">
+<select id="mobile-comments-jump" onchange="window.location.href=this.value"><option selected="selected" value="/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge">1</option><option value="/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2">2</option><option value="/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=3">3</option></select>
+</li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=2" rel="next" data-next-page="">&gt;</a></li><li class="b-pagination-item"><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge?page=3" rel="prev">&gt;&gt;|</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="multi-quote-container j-multi-quote-container hide">
+<div class="multi-quote-title">
+<span class="quote-text">Posts Quoted: </span><span class="quote-number j-quote-number"></span>
+</div>
+<div class="quote-reply">
+<span class="button j-multi-quote-reply">Reply</span>
+</div>
+<div class="quote-clear">
+<span class="button j-multi-quote-clear">Clear All Quotes</span>
+</div>
+</div>
+
+<div class="bread-heel heel-post">
+<div class="bread">
+
+<nav class="b-breadcrumb b-breadcrumb-a">
+
+<ul class="b-breadcrumb-wrapper" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="1">
+<a href="https://www.minecraftforum.net/" rel="up" itemprop="item"><span itemprop="name">Home</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="2">
+<a href="https://www.minecraftforum.net/forums/" rel="up" itemprop="item"><span itemprop="name">Minecraft Forum</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="3">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition" rel="up" itemprop="item"><span itemprop="name">Mapping and Modding: Java Edition</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="4">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods" rel="up" itemprop="item"><span itemprop="name">Minecraft Mods</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="5">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods" rel="up" itemprop="item"><span itemprop="name">WIP Mods</span></a>
+</li>
+
+<li class="b-breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<meta itemprop="position" content="6">
+<a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/1440298-1-2-5-wip-opensource-modbridge" rel="up" itemprop="item"><span itemprop="name">[1.2.5] [WIP] [OpenSource] ModBridge</span></a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+
+<hr class="post-thread-nav-divide">
+
+<div class="post-thread-nav">
+<div class="prev-thread-button">
+<a href="https://www.minecraftforum.net/forums/wip-mods/1440298-1-2-5-wip-opensource-modbridge/previous" class="no-refresh j-jump-forum-sub button" data-title="Previous Thread">Previous Thread</a>
+</div>
+<div class="jump-to-forum post">
+<a href="https://www.minecraftforum.net/forums/jump" class="modal-link no-refresh j-jump-forum-sub button" data-title="Jump to Forum">Jump to Forum</a>
+</div>
+<div class="next-thread-button">
+<a href="https://www.minecraftforum.net/forums/wip-mods/1440298-1-2-5-wip-opensource-modbridge/next" class="no-refresh j-jump-forum-sub button" data-title="Next Thread">Next Thread</a>
+</div>
+</div>
+</div>
+<div class="xt-placement xt-anyclip ">
+<!-- -->
+</div>
+</section>
+</div>
+</div>
+
+<section class="ad-container ad-container-footer">
+<div class="ad-bin">
+<div class="xt-placement xt-leaderboard-footer ">
+<div id="cdm-zone-04" data-defer="true"></div>
+</div>
+</div>
+</section>
+<div id="footer-push" style="height: 535px !important"></div>
+</div>
+<footer id="footer">
+<div class="footer-magic-find">
+<div class="footer-container w-container">
+<div class="divleft">
+<div class="divlinks">
+<div class="divhalf">
+<div class="divmf">
+<a href="https://www.magicfind.us/" target="_blank" class="w-inline-block"><img src="modbridge-mcf_files/magicFind.webp" alt="" class="image-4" width="240"></a>
+</div>
+<div class="divcategory">
+<h4 class="footerh4">Social Media</h4>
+<div class="divcommunities">
+<div class="divsocialmedia">
+<a href="https://discord.gg/wGrQNKX" target="_blank"><img src="modbridge-mcf_files/discord.webp" alt="" class="image-3" width="35"></a>
+</div>
+<div class="divsocialmedia">
+<a href="https://www.youtube.com/user/mcspotlights" target="_blank"><img src="modbridge-mcf_files/yt.webp" alt="" class="image-3" width="28"></a>
+</div>
+<div class="divsocialmedia">
+<a href="https://twitter.com/minecraftforum" target="_blank"><img src="modbridge-mcf_files/twr.webp" alt="" class="image-3" width="38"></a>
+</div>
+<div class="divsocialmedia">
+<a href="https://www.facebook.com/minecraftforums" target="_blank"><img src="modbridge-mcf_files/fb.webp" alt="" class="image-3" width="28"></a>
+</div>
+</div>
+</div>
+<div class="divcategory">
+<h4 class="footerh4">Services</h4>
+<div class="divcommunities">
+<div class="divmff">
+<p class="footerp"><a href="https://www.minecraftforum.net/login?returnUrl=%252fforums%252fmapping-and-modding-java-edition%252fminecraft-mods%252fwip-mods%252f1440298-1-2-5-wip-opensource-modbridge" target="_blank">Sign In</a></p>
+</div>
+<div class="divmff">
+<p class="footerp"><a href="http://www.minecraftforum.net/meta/support" target="_blank" rel="noopener noreferrer">Help</a></p>
+</div>
+<div class="divmff">
+<p class="footerp"><a href="https://www.magicfind.us/#audience" target="_blank">Advertise</a></p>
+</div>
+</div>
+</div>
+<div class="divcategory">
+<h4 class="footerh4">Resources</h4>
+<div class="divcommunities">
+<div class="divmff">
+<p class="footerp"><a href="https://www.magicfind.us/terms/" target="_blank">Terms of Service</a></p>
+</div>
+<div class="divmff">
+<p class="footerp"><a href="https://www.magicfind.us/privacy/" target="_blank">Privacy Policy</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="divhalf">
+<div class="divcategory">
+<h4 class="footerh4">Our Communities</h4>
+<div class="divcommunities">
+<div class="divmff">
+<ul class="footerlistlinks w-list-unstyled">
+<li class="footerp"><a href="https://www.mmo-champion.com/content/" class="link-2" target="_blank">MMO-Champion</a></li>
+<li class="footerp"><a href="https://www.hearthpwn.com/" class="link-2" target="_blank">HearthPwn</a></li>
+<li class="footerp"><a href="https://www.minecraftforum.net/" class="link-2" target="_blank">Minecraft Forum</a></li>
+<li class="footerp"><a href="https://overframe.gg/" class="link-2" target="_blank">Overframe</a></li>
+<li class="footerp"><a href="https://www.mtgsalvation.com/" class="link-2" target="_blank">MTG&nbsp;Salvation</a></li>
+<li class="footerp"><a href="https://www.diablofans.com/" class="link-2" target="_blank">DiabloFans</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="divlinks moba-links">
+<div class="divfull">
+<div>
+<h4 class="footerh4 footer-header-center">MOBAFire Network</h4>
+<div class="divcommunities moba-sites">
+<div class="divp">
+<ul class="footerlistlinks w-list-unstyled">
+<li class="footerp"><a href="https://www.mobafire.com/" class="link-2" target="_blank">MOBAFire.com</a></li>
+<li class="footerp"><a href="https://www.leaguespy.gg/" class="link-2" target="_blank">Leaguespy.gg</a></li>
+<li class="footerp"><a href="https://www.counterstats.net/" class="link-2" target="_blank">CounterStats.net</a></li>
+</ul>
+</div><div class="divp">
+<ul class="footerlistlinks w-list-unstyled">
+<li class="footerp"><a href="https://www.mobafire.com/teamfight-tactics" class="link-2" target="_blank">Teamfight Tactics</a></li>
+<li class="footerp"><a href="https://www.wildriftfire.com/" class="link-2" target="_blank">WildRiftFire.com</a></li>
+<li class="footerp"><a href="https://www.runeterrafire.com/" class="link-2" target="_blank">RuneterraFire.com</a></li>
+</ul>
+</div><div class="divp">
+<ul class="footerlistlinks w-list-unstyled">
+<li class="footerp"><a href="https://www.smitefire.com/" class="link-2" target="_blank">SMITEFire.com</a></li>
+<li class="footerp"><a href="https://www.dotafire.com/" class="link-2" target="_blank">DOTAFire.com</a></li>
+<li class="footerp"><a href="https://www.artifactfire.com/" class="link-2" target="_blank">ArtifactFire.com</a></li>
+</ul>
+</div><div class="divp">
+<ul class="footerlistlinks w-list-unstyled">
+<li class="footerp"><a href="https://www.heroesfire.com/" class="link-2" target="_blank">HeroesFire.com</a></li>
+<li class="footerp"><a href="https://www.vaingloryfire.com/" class="link-2" target="_blank">VaingloryFire.com</a></li>
+<li class="footerp"><a href="https://www.mmorpg.com/" class="link-2" target="_blank">MMORPG.com</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-container w-container">
+<p class="pcopyright">© 2022 Magic Find, Inc. All rights reserved.</p>
+</div>
+
+</div>
+<a data-ga-click-event-tracking-category="Mobile View" id="responsive-footer-button" class="rs-link rs-link-to-responsive" style="display: none;">Mobile View</a>
+<div class="xt-placement xt-main-med-rect-footer footer-ad-medRect">
+<div id="cdm-zone-03" data-defer="true"></div>
+</div>
+</footer>
+<div class="page-block btf-ad-analytic">
+<div class="xt-placement xt-skindiv btf-ad-analytic">
+
+</div>
+</div>
+<div class="xt-placement xt-enddiv ">
+</div>
+<div class="xt-placement xt-vmdiv ">
+<div class="vm-placement" data-id="5f648ce7583dac4037e909bb" style="display:none"></div>
+</div>
+</div>
+
+<div id="analytics">
+</div>
+
+
+<div id="tooltip-container" class="u-tooltips-a" style="position: absolute; display: none;"></div></body></html>

@@ -1,0 +1,1 @@
+These archived pages are retrieved either from the Wayback Machine or via Right-click "Save Page As..." and are intended as a historical copy in case the original website ever goes offline.
