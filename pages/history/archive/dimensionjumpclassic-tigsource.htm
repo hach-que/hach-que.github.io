@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" />
+<meta charset="utf-8" />
+<meta name="description" content="Dimension Jump [puzzle platformer]" />
+<meta name="keywords" content="PHP, MySQL, bulletin, board, free, open, source, smf, simple, machines, forum" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/vs.min.css">
+<title>Dimension Jump [puzzle platformer]</title>
+<link rel="stylesheet" type="text/css" href="https://forums.tigsource.com/Themes/tigsource/style.css?fin12" />
+<link rel="stylesheet" type="text/css" href="https://forums.tigsource.com/Themes/default/print.css?fin12" media="print" />
+<link rel="help" href="https://forums.tigsource.com/index.php?action=help" target="_blank" />
+<link rel="search" href="https://forums.tigsource.com/index.php?action=search" />
+<link rel="contents" href="https://forums.tigsource.com/index.php" />
+<link rel="alternate" type="application/rss+xml" title="TIGSource Forums - RSS" href="https://forums.tigsource.com/index.php?type=rss;action=.xml" />
+<link rel="prev" href="https://forums.tigsource.com/index.php?topic=17363.0;prev_next=prev" />
+<link rel="next" href="https://forums.tigsource.com/index.php?topic=17363.0;prev_next=next" />
+<link rel="index" href="https://forums.tigsource.com/index.php?board=6.0" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+</head>
+<body id="page_bg">
+<div id="wrapper">
+<div id="header-l">
+<div id="header-r">
+<div id="header">
+<div id="logo-bg"><a href="https://forums.tigsource.com/index.php" title=""></a></div><div id="news">TIGSource has an official Discord server now!<br /><br /><b>LINK:<b> <b><a href="https://discord.gg/m9fBD8V" target="_blank">https://discord.gg/m9fBD8V</a></b></b></b></div>
+</div>
+</div>
+</div>
+<div id="shadow-l">
+<div id="shadow-r">
+<div id="mainbody">
+<div id="toolbar">
+<div id="nav">
+<ul><li><a href="https://forums.tigsource.com/index.php">Home</a></li><li><a href="https://www.tigsource.com">TIGSource</a></li><li><a href="https://forums.tigsource.com/index.php?action=help">Help</a></li><li><a href="https://forums.tigsource.com/index.php?action=search">Search</a></li><li><a href="https://forums.tigsource.com/index.php?action=login">Login</a></li><li><a href="https://forums.tigsource.com/index.php?action=register">Register</a></li></ul>
+</div>
+</div>
+<div id="showcase">
+<div class="userinfo">
+Welcome, <b>Guest</b>. Please <a href="https://forums.tigsource.com/index.php?action=login">login</a> or <a href="https://forums.tigsource.com/index.php?action=register">register</a>.<br />Did you miss your <a href="https://forums.tigsource.com/index.php?action=activate">activation email?</a>
+<form action="https://forums.tigsource.com/index.php?action=login2" method="post" accept-charset="UTF-8" style="margin: 4px 0;" onsubmit="hashLoginPassword(this, '5c7182b800cb71f410c930e7b6c43cd9');">
+<input type="text" name="user" style="margin-bottom: 4px;" size="10" />
+<input type="password" name="passwrd" style="margin-bottom: 4px;" size="10" /><br />
+<select name="cookielength">
+<option value="60">1 Hour</option>
+<option value="1440">1 Day</option>
+<option value="10080">1 Week</option>
+<option value="43200">1 Month</option>
+<option value="-1" selected="selected">Forever</option>
+</select>
+<input type="submit" value="Login" />
+<input type="hidden" name="hash_passwrd" value="" />
+</form>Login with username, password and session length<br /><br /> </div>
+<div class="searchfield">
+<form action="https://forums.tigsource.com/index.php?action=search2" method="post" style="margin: 4px 0;">
+<input type="text" name="search" value="" size="30" style="margin-bottom: 4px;" />&nbsp;
+<input type="submit" name="submit" value="Search" style="margin-bottom: 4px;" /><br />
+<a href="https://forums.tigsource.com/index.php?action=search;advanced">Advanced search</a>
+<input type="hidden" name="advanced" value="0" />
+<input type="hidden" name="topic" value="17363" />
+</form><br />
+<b>1404107</b> Posts in <b>68335</b> Topics- by <span style="white-space: nowrap;"><b>61993</b> Members</span> -
+Latest Member: <b> <a href="https://forums.tigsource.com/index.php?action=profile;u=100425">solsticecm</a></b><br /><br />December 30, 2022, 11:15:21 PM
+<br /><br /><em>Need hosting?</em> <a href="https://www.digitalocean.com/?refcode=c3735ae9a6de">Check out Digital Ocean</a>
+<br /><span style="font-size: 10px;">
+(<a href="https://forums.tigsource.com/index.php?topic=47972.0">more details in this thread</a>)
+</span>
+</div>
+<div class="clr"></div>
+</div>
+<a name="top"></a>
+<a name="msg496068"></a>
+<div><span class="pathway"><a href="https://forums.tigsource.com/index.php" class="pathway">TIGSource Forums</a><img src="https://forums.tigsource.com/Themes/tigsource/images/arrow.png" style="margin: 0 12px 0 12px" alt="" /><a href="https://forums.tigsource.com/index.php#2" class="pathway">Developer</a><img src="https://forums.tigsource.com/Themes/tigsource/images/arrow.png" style="margin: 0 12px 0 12px" alt="" /><a href="https://forums.tigsource.com/index.php?board=6.0" class="pathway">Playtesting</a><img src="https://forums.tigsource.com/Themes/tigsource/images/arrow.png" style="margin: 0 12px 0 12px" alt="" />Dimension Jump [puzzle platformer]</span></div>
+<div class="nav" style="margin-bottom: 2px;"> <a href="https://forums.tigsource.com/index.php?topic=17363.0;prev_next=prev#new">&laquo; previous</a> <a href="https://forums.tigsource.com/index.php?topic=17363.0;prev_next=next#new">next &raquo;</a></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="tborder" style="margin-bottom:5px;">
+<tr class="catbg">
+<td class="middletext">Pages: [<b>1</b>] </td>
+<td align="right" class="postbuttons">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td><a href="https://forums.tigsource.com/index.php?action=printpage;topic=17363.0" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/english/print.gif" alt="Print" border="0" /></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="0" border="0" class="tborder" style="border-bottom: 0;">
+<tr class="catbg3">
+<td valign="middle" width="2%" style="padding-left: 6px;">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/topic/normal_post.gif" align="bottom" alt="" />
+</td>
+<td width="13%"> Author</td>
+<td valign="middle" width="85%" style="padding-left: 6px;" id="top_subject">
+Topic: Dimension Jump [puzzle platformer] &nbsp;(Read 2229 times)
+</td>
+</tr>
+</table>
+<form action="https://forums.tigsource.com/index.php?action=quickmod2;topic=17363.0" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return in_edit_mode == 1 ? modify_save('5c7182b800cb71f410c930e7b6c43cd9') : confirm('Are you sure you want to do this?');">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="bordercolor">
+<tr><td style="padding: 1px 1px 0 1px;">
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b><a href="https://forums.tigsource.com/index.php?action=profile;u=6667" title="View the profile of Hach-Que">Hach-Que</a></b>
+<div class="smalltext">
+Level 1<br />
+<img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><br /><br />
+<div style="overflow: auto; width: 100%;"><img src="https://i.imgur.com/efiOXht.png" alt="" class="avatar" border="0" /></div><br />
+a radical dame who likes to make games<br />
+<br />
+<br />
+<a href="https://forums.tigsource.com/index.php?action=profile;u=6667"><img src="https://forums.tigsource.com/Themes/tigsource/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+<a href="https://www.redpointgames.com.au/" title="Redpoint Games" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/www_sm.gif" alt="WWW" border="0" /></a>
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg496068#msg496068"><img src="https://forums.tigsource.com/Themes/default/images/post/icon-osw.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_496068">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg496068#msg496068">Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b> on:</b> January 23, 2011, 07:53:41 PM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post">Oh yeah, my first game release in what must be over a year.&nbsp; I present:<br /><br /><div align="center"><span style="font-size: 20pt; line-height: 1.3em;">Dimension Jump</span></div><br /><b>Music:</b> From the Newground Audio Portal; see game for full credits.<br /><b>Everything Else:</b> James Rhodes<br /><br /><img src="http://images.cdn.gamejolt.com/games/4197/screenshots/4197_8964.jpg" alt="" border="0" /><br /><br />Dimension Jump is an incredibly difficult puzzle platformer (although the earlier levels are a little easy).&nbsp; I&#039;m not going to ruin the game for you by explaining everything the game uses in it&#039;s puzzles, but it has over 60 levels, the later of which probably break a few health and safety laws due to their effect of inducing RSI in whoever is playing them.&nbsp; <img src="https://forums.tigsource.com/Smileys/derek/evil.gif" alt="Evil" border="0" /><br /><br />Anyway, <b>you awesome people can go download and play it over at <a href="http://gamejolt.com/freeware/games/puzzle/dimension-jump/4197/" target="_blank">GameJolt</a>.</b><br /></div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+<td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_496068">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="signature"><div align="center"><a href="http://tigjam.com.au/" target="_blank"><b>TIGJAM AUSTRALIA</b></a></div></div>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 1px 1px 0 1px;">
+<a name="msg496293"></a>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg2">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b><a href="https://forums.tigsource.com/index.php?action=profile;u=5425" title="View the profile of Blodyavenger">Blodyavenger</a></b>
+<div class="smalltext">
+Level 3<br />
+<img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><br /><br />
+<div style="overflow: auto; width: 100%;"><img src="http://emberheartgames.com/images/avat1.gif" alt="" class="avatar" border="0" /></div><br />
+<br />
+<a href="https://forums.tigsource.com/index.php?action=profile;u=5425"><img src="https://forums.tigsource.com/Themes/tigsource/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+<a href="http://emberheartgames.com" title="Emberheart Games" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/www_sm.gif" alt="WWW" border="0" /></a>
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg496293#msg496293"><img src="https://forums.tigsource.com/Themes/tigsource/images/post/xx.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_496293">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg496293#msg496293">Re: Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b>Reply #1 on:</b> January 24, 2011, 06:06:53 AM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post">No replies so far for this great game? <br /><br />I got totaly pulled in and I had to do my best to get away and concentrate on my work.<br />Simple design but challanging puzzle game is what I love here.<br /><br />Can&#039;t wait to sit down and play more and maybe even finish <img src="https://forums.tigsource.com/Smileys/derek/wink.gif" alt="Wink" border="0" /><br /><br />One critic though - Hmm, I liked the level selection screen overall but sometimes you press space too many times quickly and you fall down deeply and then you need to climb all the way up.</div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+ <td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_496293">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="signature"><div align="center"> <img src="https://bit.ly/u39RPA" alt="" border="0" /><b><a href="http://www.emberheartgames.com" target="_blank">~ Emberheart Games ~</a></b> <img src="https://bit.ly/u39RPA" alt="" border="0" /><br /><b><a href="https://twitter.com/Emberheartgames" target="_blank">Twitter</a></b></div></div>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 1px 1px 0 1px;">
+<a name="msg496362"></a>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b><a href="https://forums.tigsource.com/index.php?action=profile;u=5841" title="View the profile of snowyowl">snowyowl</a></b>
+<div class="smalltext">
+Level 1<br />
+<img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><br /><br />
+<br />
+<a href="https://forums.tigsource.com/index.php?action=profile;u=5841"><img src="https://forums.tigsource.com/Themes/tigsource/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg496362#msg496362"><img src="https://forums.tigsource.com/Themes/tigsource/images/post/xx.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_496362">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg496362#msg496362">Re: Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b>Reply #2 on:</b> January 24, 2011, 07:49:41 AM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post">This game is actually really fun. The lag is annoying, but it&#039;s improved by reducing the program priority back to normal. (That&#039;s right, increasing program priority makes lag <i>worse</i>, because it sucks cycles from the keyboard and makes the game slow to respond to my input). The level selector is odd; a more traditional interface might have been better. The graphics look very cheap at first sight, even though they&#039;re not.<br /><br />Basically: A lot of small niggles in the first minute or so. That might be why this game isn&#039;t played very much; because it looks boring at first sight. It&#039;s actually really good. Well done, Hach-Que.</div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+<td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_496362">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 1px 1px 0 1px;">
+<a name="msg496374"></a>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg2">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b><a href="https://forums.tigsource.com/index.php?action=profile;u=5425" title="View the profile of Blodyavenger">Blodyavenger</a></b>
+<div class="smalltext">
+Level 3<br />
+<img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><br /><br />
+<div style="overflow: auto; width: 100%;"><img src="http://emberheartgames.com/images/avat1.gif" alt="" class="avatar" border="0" /></div><br />
+<br />
+<a href="https://forums.tigsource.com/index.php?action=profile;u=5425"><img src="https://forums.tigsource.com/Themes/tigsource/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+<a href="http://emberheartgames.com" title="Emberheart Games" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/www_sm.gif" alt="WWW" border="0" /></a>
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg496374#msg496374"><img src="https://forums.tigsource.com/Themes/tigsource/images/post/xx.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_496374">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg496374#msg496374">Re: Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b>Reply #3 on:</b> January 24, 2011, 08:14:39 AM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post">I think difficulty curve is not the best at start.<br />After you complete tutorials maps, you start with easy ones and first one or two are harder than next few. Well, maybe it only works that way for my brains <img src="https://forums.tigsource.com/Smileys/derek/wink.gif" alt="Wink" border="0" /></div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+<td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_496374">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="signature"><div align="center"> <img src="https://bit.ly/u39RPA" alt="" border="0" /><b><a href="http://www.emberheartgames.com" target="_blank">~ Emberheart Games ~</a></b> <img src="https://bit.ly/u39RPA" alt="" border="0" /><br /><b><a href="https://twitter.com/Emberheartgames" target="_blank">Twitter</a></b></div></div>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 1px 1px 0 1px;">
+<a name="msg496481"></a>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b><a href="https://forums.tigsource.com/index.php?action=profile;u=6667" title="View the profile of Hach-Que">Hach-Que</a></b>
+<div class="smalltext">
+Level 1<br />
+<img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><br /><br />
+<div style="overflow: auto; width: 100%;"><img src="https://i.imgur.com/efiOXht.png" alt="" class="avatar" border="0" /></div><br />
+a radical dame who likes to make games<br />
+<br />
+<br />
+<a href="https://forums.tigsource.com/index.php?action=profile;u=6667"><img src="https://forums.tigsource.com/Themes/tigsource/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+<a href="https://www.redpointgames.com.au/" title="Redpoint Games" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/www_sm.gif" alt="WWW" border="0" /></a>
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg496481#msg496481"><img src="https://forums.tigsource.com/Themes/tigsource/images/post/xx.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_496481">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg496481#msg496481">Re: Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b>Reply #4 on:</b> January 24, 2011, 11:31:18 AM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post"><div class="quoteheader"><a href="https://forums.tigsource.com/index.php?topic=17363.msg496362#msg496362">Quote from: snowyowl on January 24, 2011, 07:49:41 AM</a></div><div class="quote">This game is actually really fun. The lag is annoying, but it&#039;s improved by reducing the program priority back to normal. (That&#039;s right, increasing program priority makes lag <i>worse</i>, because it sucks cycles from the keyboard and makes the game slow to respond to my input). The level selector is odd; a more traditional interface might have been better. The graphics look very cheap at first sight, even though they&#039;re not.<br /></div><br />Yeah, some computers seem to fair worse than others when it comes to the level select in terms of performance.&nbsp; Unfortunately, this is because I had to do the collision / solidity checking manually in this game due to the limitation of Game Maker&#039;s built-in &quot;solid&quot; system, which doesn&#039;t work when you&#039;re alternating between two different versions of the level <img src="https://forums.tigsource.com/Smileys/derek/wink.gif" alt="Wink" border="0" /><br /><br />I&#039;ve optimized everything to the nth-degree after getting feedback about this, so it&#039;s practically running as fast it will ever run.&nbsp; There&#039;s not much else I can do about it I&#039;m afraid <img src="https://forums.tigsource.com/Smileys/derek/sad.gif" alt="Sad" border="0" /></div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+<td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_496481">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="signature"><div align="center"><a href="http://tigjam.com.au/" target="_blank"><b>TIGJAM AUSTRALIA</b></a></div></div>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 1px 1px 0 1px;">
+<a name="msg497329"></a>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg2">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b><a href="https://forums.tigsource.com/index.php?action=profile;u=6732" title="View the profile of Zack">Zack</a></b>
+<div class="smalltext">
+Level 0<br />
+<img src="https://forums.tigsource.com/Themes/tigsource/images/starsmall.gif" alt="*" border="0" /><img src="https://forums.tigsource.com/Themes/tigsource/images/starsmall.gif" alt="*" border="0" /><br /><br />
+<div style="overflow: auto; width: 100%;"><img src="https://www.gravatar.com/avatar/5751bbe283080fc9df9ae70b7e7bb41b?s=60&amp;r=pg&amp;d=http%3A%2F%2Fgamejolt.com%2Fimg%2Fno-avatar.png" alt="" class="avatar" border="0" /></div><br />
+i make stuff with stuff.<br />
+<br />
+<br />
+<a href="https://forums.tigsource.com/index.php?action=profile;u=6732"><img src="https://forums.tigsource.com/Themes/tigsource/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+<a href="http://zackbanack.com" title="Zack Banack" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/www_sm.gif" alt="WWW" border="0" /></a>
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg497329#msg497329"><img src="https://forums.tigsource.com/Themes/tigsource/images/post/xx.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_497329">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg497329#msg497329">Re: Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b>Reply #5 on:</b> January 25, 2011, 11:19:50 AM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post">Reminded me of Time Fukc. That&#039;s not a bad thing. It was fun, but rather difficult. I&#039;ll have to play more later. Nice work. <img src="https://forums.tigsource.com/Smileys/derek/smiley.gif" alt="Smiley" border="0" /></div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+<td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_497329">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 1px 1px 0 1px;">
+<a name="msg497532"></a>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b>pgil</b>
+<div class="smalltext">
+Guest<br />
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg497532#msg497532"><img src="https://forums.tigsource.com/Themes/tigsource/images/post/xx.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_497532">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg497532#msg497532">Re: Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b>Reply #6 on:</b> January 25, 2011, 02:39:28 PM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post">I get about 15 fps on the level-select screen, but everything is fine in the actual levels. What are you doing differently there?</div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+<td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_497532">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 1px 1px 0 1px;">
+<a name="msg497887"></a>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+<tr><td class="windowbg2">
+<table width="100%" cellpadding="5" cellspacing="0" style="table-layout: fixed;">
+<tr>
+<td valign="top" width="16%" rowspan="2" style="overflow: hidden;">
+<b><a href="https://forums.tigsource.com/index.php?action=profile;u=6667" title="View the profile of Hach-Que">Hach-Que</a></b>
+<div class="smalltext">
+Level 1<br />
+<img src="https://forums.tigsource.com/Themes/tigsource/images/star.gif" alt="*" border="0" /><br /><br />
+<div style="overflow: auto; width: 100%;"><img src="https://i.imgur.com/efiOXht.png" alt="" class="avatar" border="0" /></div><br />
+a radical dame who likes to make games<br />
+<br />
+<br />
+<a href="https://forums.tigsource.com/index.php?action=profile;u=6667"><img src="https://forums.tigsource.com/Themes/tigsource/images/icons/profile_sm.gif" alt="View Profile" title="View Profile" border="0" /></a>
+<a href="https://www.redpointgames.com.au/" title="Redpoint Games" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/www_sm.gif" alt="WWW" border="0" /></a>
+</div>
+</td>
+<td valign="top" width="85%" height="100%">
+<table width="100%" border="0"><tr>
+<td valign="middle"><a href="https://forums.tigsource.com/index.php?topic=17363.msg497887#msg497887"><img src="https://forums.tigsource.com/Themes/tigsource/images/post/xx.gif" alt="" border="0" /></a></td>
+<td valign="middle">
+<div style="font-weight: bold;" id="subject_497887">
+<a href="https://forums.tigsource.com/index.php?topic=17363.msg497887#msg497887">Re: Dimension Jump [puzzle platformer]</a>
+</div>
+<div class="smalltext">&#171; <b>Reply #7 on:</b> January 25, 2011, 11:25:41 PM &#187;</div></td>
+<td align="right" class="postbuttons">
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="post">Actually it&#039;s just because there&#039;s more solid / empty boundaries than normally exist in levels due to the column-based layout.&nbsp; In addition, there&#039;s the solids which alternate between realities.<br /><br />Basically it comes down to the fact that the collision checking is done manually with all instances that inherit par_solid, and due to the layout the level select screen has considerably more solid instances than other levels.&nbsp; So there&#039;s just more instances for the collision checking to run through, and hence, it&#039;s slower.</div>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="smalltext" width="85%">
+<table width="100%" border="0" style="table-layout: fixed;"><tr>
+<td colspan="2" class="smalltext" width="100%">
+</td>
+</tr><tr>
+<td valign="bottom" class="smalltext" id="modified_497887">
+</td>
+<td align="right" valign="bottom" class="smalltext">
+<img src="https://forums.tigsource.com/Themes/tigsource/images/ip.gif" alt="" border="0" />
+Logged
+</td>
+</tr></table>
+<hr width="100%" size="1" class="hrcolor" />
+<div class="signature"><div align="center"><a href="http://tigjam.com.au/" target="_blank"><b>TIGJAM AUSTRALIA</b></a></div></div>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+<tr><td style="padding: 0 0 1px 0;"></td></tr>
+</table>
+<a name="lastPost"></a>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="tborder" style="margin-top:5px;">
+<tr class="catbg">
+<td class="middletext">Pages: [<b>1</b>] </td>
+<td align="right" class="postbuttons">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td><a href="https://forums.tigsource.com/index.php?action=printpage;topic=17363.0" target="_blank"><img src="https://forums.tigsource.com/Themes/tigsource/images/english/print.gif" alt="Print" border="0" /></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 1ex;">
+<tr>
+<td valign="top" align="right" class="nav"> <a href="https://forums.tigsource.com/index.php?topic=17363.0;prev_next=prev#new">&laquo; previous</a> <a href="https://forums.tigsource.com/index.php?topic=17363.0;prev_next=next#new">next &raquo;</a></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="postbuttons"></td>
+</tr>
+</table>
+</form>
+<div class="tborder"><div class="titlebg2" style="padding: 4px;" align="right">
+<form action="https://forums.tigsource.com/index.php" method="get" accept-charset="UTF-8" style="padding:0; margin: 0;">
+<span class="smalltext">Jump to:</span>
+<select name="jumpto" id="jumpto" onchange="if (this.selectedIndex > 0 &amp;&amp; this.options[this.selectedIndex].value) window.location.href = smf_scripturl + this.options[this.selectedIndex].value.substr(smf_scripturl.indexOf('?') == -1 || this.options[this.selectedIndex].value.substr(0, 1) != '?' ? 0 : 1);">
+<option value="">Please select a destination:</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="#4">Community</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="?board=17.0"> => Townhall</option>
+<option value="?board=53.0"> ===> Forum Issues</option>
+<option value="?board=56.0"> =====> Archived subforums (read only)</option>
+<option value="?board=30.0"> =======> Archived Projects</option>
+<option value="?board=28.0"> =========> Balding's Quest</option>
+<option value="?board=39.0"> =========> TIGCast</option>
+<option value="?board=29.0"> =========> Indie Brawl</option>
+<option value="?board=5.0"> =======> Creative</option>
+<option value="?board=44.0"> =========> Writing</option>
+<option value="?board=16.0"> =======> Tutorials</option>
+<option value="?board=27.0"> => DevLogs</option>
+<option value="?board=15.0"> => Jams &amp; Events</option>
+<option value="?board=9.0"> ===> Competitions</option>
+<option value="?board=58.0"> =====> Wholesome</option>
+<option value="?board=52.0"> =====> Sports</option>
+<option value="?board=46.0"> =====> Versus</option>
+<option value="?board=42.0"> =====> A Game by Its Cover</option>
+<option value="?board=34.0"> =====> Old Competitions</option>
+<option value="?board=32.0"> =======> GAMMA</option>
+<option value="?board=19.0"> =======> B-Games</option>
+<option value="?board=31.0"> =======> Text the Halls</option>
+<option value="?board=20.0"> =======> VGNG</option>
+<option value="?board=21.0"> =======> Procedural Generation</option>
+<option value="?board=22.0"> =======> Bootleg Demakes</option>
+<option value="?board=23.0"> =======> Commonplace Book</option>
+<option value="?board=33.0"> =======> Cockpit Competition</option>
+<option value="?board=36.0"> =======> Adult/Educational Compo</option>
+<option value="?board=37.0"> =======> Assemblee: Part 1</option>
+<option value="?board=38.0"> =======> Assemblee: Part 2</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="#2">Developer</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="?board=6.0" selected="selected"> => Playtesting</option>
+<option value="?board=24.0"> => Art</option>
+<option value="?board=45.0"> ===> Workshop</option>
+<option value="?board=26.0"> => Audio</option>
+<option value="?board=25.0"> => Design</option>
+<option value="?board=4.0"> => Technical</option>
+<option value="?board=3.0"> => Business</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="#8">Jobs</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="?board=40.0"> => Offering Paid Work</option>
+<option value="?board=43.0"> => Portfolios</option>
+<option value="?board=8.0"> => Collaborations</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="#1">Player</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="?board=1.0"> => General</option>
+<option value="?board=2.0"> => Games</option>
+<option value="?board=57.0"> => Table Talk</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="#3">Hidden</option>
+<option value="" disabled="disabled">-----------------------------</option>
+<option value="?board=54.0"> ===> Valley of the Dead</option>
+<option value="?board=49.0"> =====> Game Club</option>
+<option value="?board=41.0"> =====> Unpaid Work</option>
+</select>&nbsp;
+<input type="button" value="go" onclick="if (this.form.jumpto.options[this.form.jumpto.selectedIndex].value) window.location.href = 'https://forums.tigsource.com/index.php' + this.form.jumpto.options[this.form.jumpto.selectedIndex].value;" />
+</form>
+</div></div><br />
+</div>
+</div>
+</div>
+</div>
+<div id="wrapper">
+<div id="footer-l">
+<div id="footer-r">
+<div id="footer">
+<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="https://www.simplemachines.org/" title="Simple Machines Forum" target="_blank">Powered by SMF 1.1.23</a> |
+<a href="https://www.simplemachines.org/about/copyright.php" title="Free Forum Software" target="_blank">SMF &copy; 2015, Simple Machines</a>
+</span>
+</div>
+</div>
+</div>
+<div id="footer2">
+Theme orange-lt created by <a href="http://padexx.de">panic</a>
+</div>
+
+</div>
+<div id="ajax_in_progress" style="display: none;">Loading...</div>
+
+<link rel="stylesheet" href="/css/archived.css" />
+<div class="june-history-banner">
+    This is an archived version of the original page with some functionality removed. (<a href="https://forums.tigsource.com/index.php?topic=17363.0">View Original</a>) (<a href="../">Return to History Page</a>)
+</div>
+
+</body></html>
