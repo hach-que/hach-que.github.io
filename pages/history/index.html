@@ -264,6 +264,25 @@
 
           <h4 class="mt-5 mb-2"><a name="2022"></a>2023</h4>
           <p class="mt-2 mb-4 text-start">In 2023, I was working on Unreal Engine plugins at my own company Redpoint Games.</p>
+          <div class="row my-3" x-type="opensource">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Feb</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="rkm"></a><a href="https://src.redpoint.games/redpointgames/rkm">RKM (Redpoint Kubernetes Manager)</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>
+                I built a tool to provision and run Kubernetes clusters across Linux and Windows nodes in a super simple way.
+              </p>
+              <p>
+                RKM was developed because I <em>tried</em> to set up RKE2 on my build servers, with the intent of running Unreal Engine build jobs in Kubernetes, but it didn't work and the uninstallation process trashed the build servers to the point that I had to reinstall Windows. I designed RKM so that it would keep all of the Kubernetes configuration, assets, storage, etc. under a unique installation directory (<code>C:\RKM</code> on Windows, <code>/opt/rkm</code> on Linux). That way I could easily just throw away the Kubernetes install by deleting a folder and let it re-provision the whole thing. By having a single executable start and manage all of the Kubernetes components, it also meant that RKM didn't have to install services system-wide other than itself.
+              </p>
+              <p>
+                I also did some experimental work on getting Kubernetes to run entirely on Windows, using WSL to run the Linux bits. Unfortunately Windows services can't use WSL so this got blocked on upstream WSL bugs.
+              </p>
+              <p>
+                As of writing, RKM is used to run UEFS on all the build servers and keep all of the installed software up-to-date, though I don't run build jobs in Kubernetes yet.
+              </p>
+            </div>
+          </div>
           <div class="row my-3" x-type="event">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Feb</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="melbggj2023"></a><a href="https://eventhost.au/-/melbggj2023">Melbourne Global Game Jam</a></div>
@@ -323,7 +342,23 @@
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="uefs"></a><a href="https://docs.redpoint.games/uefs/">UEFS</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
             <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
-              Package and use self-contained Unreal Engine installs on Windows, macOS and Docker.
+              <p>Package and use self-contained Unreal Engine installs on Windows, macOS, Docker and Kubernetes.</p>
+              <p>
+                I started work on UEFS because I wanted to explore solving the "large container image" problem that Unreal Engine containers had - where the Docker images you'd need to run were so massive that it would take hours for a container to get scheduled on a node.
+              </p>
+              <p>
+                It turns out packaging up Unreal Engine installations and pulling them from registries was useful for more than just Docker, and the main use case then ended up being using it to sync Unreal Engine installs across all of the Windows and macOS build servers. Now instead of having to use Syncthing to keep Unreal Engine installs up-to-date on each machine, the build jobs could just choose to mount whatever Unreal Engine version they wanted to use, and it would just be fetched on demand.
+              </p>
+              <p>
+                Even more features then naturally arose out of this architecture that resulted in further benefits and increased build performance, such as:
+              </p>
+              <ul>
+                <li>Virtualising the storage that the package VHDs are served from using WinFSP, so that Unreal Engine could be mounted instantly without waiting for the whole thing to download. UEFS will then fetch the 128kb blocks from the network as they're accessed for the first time.</li>
+                <li>Being able to mount the same Unreal Engine install at multiple paths on the system completely eliminated the global mutex that Unreal Engine uses to reserve the engine directory, allowing multiple Unreal Engine build jobs with the same Unreal Engine version to run on the same build server at once.</li>
+              </ul>
+              <p>
+                As of February 2023, there's experimental support for UEFS packages to be mounted as volumes in Kubernetes clusters.
+              </p>
             </div>
           </div>
           <div class="row my-3" x-type="plugin">
