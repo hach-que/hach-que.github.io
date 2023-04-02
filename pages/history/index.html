@@ -236,7 +236,6 @@
             
             - RoketPack
             - Dx: Distributed Extensions for .NET
-            - Phabricator work including Harbormaster and Drydock
             - Still need to cover what I did at PageUp People in 2013-2015
             - Pivot game engine (never released)
             - Ancient stuff which can be found under "Project Backup 2009"
@@ -1031,8 +1030,28 @@
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="cstools"></a><a href="https://github.com/hach-que/cstools">cstools</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
             <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
-              <p>cstools was a collection of C# related tooling, designed to integrate with Phabricator (which we were using at the time to store source code and merge pull requests).</p>
+              <p>cstools was a collection of C# related tooling, designed to integrate with <a href="#phabricator">Phabricator</a>. We were using Phabricator at the time to store source code and merge pull requests.</p>
               It included a linter based on StyleCop and a code coverage tool that would instrument assemblies.
+            </div>
+          </div>
+          <div class="row my-3" x-type="opensource">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar 2013 &raquo; Jul 2015</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="phabricator"></a><a href="https://github.com/phacility/phabricator">Phabricator</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>From 2013 to 2015, I contributed to the open source Phabricator project. Phabricator was a collection of web applications for software development. I stopped contributing around 2015 because upstream was no longer receptive to code contributions from external developers, and in 2021 Phabricator ceased to be maintained.</p>
+              <img class="img-fluid rounded mb-3" src="/history/img/phabricator.png" style="border: solid 1px #ddd;" title="Screenshots of Phabricator from the Phabricator website." alt="Screenshots of Phabricator from the Phabricator website." />
+              <p>In addition to the myriad of bug fixes I made, I also had a hand in some of the major features of Phabricator, including the build system Harbormaster. Here are some of the notable changes:</p>
+              <ul>
+                <li>Making Phrequent, the time tracking system, more usable by adding <code>arc start</code> and <code>arc stop</code> commands to the Arcanist CLI.</li>
+                <li>Implementing the core of Harbormaster, the CI build system inside Phabricator and getting it to actually function as a build system. This included running commands remotely over SSH, streaming build logs, and so on.</li>
+                <li>Implementing core parts of Drydock, the resource allocation system inside Phabricator. Drydock was used to reserve machines for Harbormaster builds and check out working directories.</li>
+                <li>Adding support for C# tooling like unit test execution and linting to Arcanist, so that these checks could run when developers submitted their C# code for code review.</li>
+                <li>Building Phragment, which was a hierarchical versioned artifact storage system. We used this to serve game binaries and patches for <a href="#unearth">Unearth</a> builds through the game launcher we'd written.</li>
+                <li>Adding early Windows support to Harbormaster and Drydock using WinRM (PowerShell remoting).</li>
+              </ul>
+              <p>Many of my later changes, such as support for Drydock allocating KVM virtual machines, never got merged because the upstream developers stopped accepting external contributions.</p>
+              <p>As part of employment at PageUp People, I also developed an internal tool called Pipeline that ran inside the PageUp Phabricator instance. This was unfortunately never open sourced or upstreamed, but it was effectively a Phabricator equivalent for <a href="https://spinnaker.io/">Spinnaker</a> and we used it to manage the extremely complex deployment process that could not be encapsulated entirely within Harbormaster build plans.</p>
             </div>
           </div>
           <div class="row my-3" x-type="opensource">
@@ -1526,7 +1545,6 @@
           <ul style="text-align: left;">
             <li>RoketPack</li>
             <li>Dx: Distributed Extensions for .NET</li>
-            <li>Phabricator work including the development of Harbormaster and Drydock</li>
             <li>Work done at PageUp People between 2013 and 2015</li>
             <li>Pivot game engine (never released)</li>
             <li>Ancient stuff I have in a folder called "Project Backup 2009"</li>
