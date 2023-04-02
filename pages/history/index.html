@@ -236,8 +236,6 @@
             
             - RoketPack
             - Dx: Distributed Extensions for .NET
-            - JamHost
-            - What Would Moly Duex game jam w/ Andrew Brophy
             - Phabricator work including Harbormaster and Drydock
             - Still need to cover what I did at PageUp People in 2013-2015
             - Pivot game engine (never released)
@@ -791,6 +789,21 @@
               This was <a href="https://globalgamejam.org/2017/games/super-ball-brawlers">made at Global Game Jam 2017</a>, with Josh Harvey, Liam Alkamraikhi, Abby Phillips, Andrew Kasapidis and Kevin Powe. This is probably the last game I ever released that was built in the <a href="#protogame">Protogame</a> framework before moving to Unreal Engine.
             </div>
           </div>
+          <div class="row my-3" x-type="other">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="jamhost"></a><a href="https://eventhost.au/">EventHost</a> (previously known as JamHost)</div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Website</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>EventHost (previously known as JamHost) is an event hosting platform. Unlike Eventbrite, it basically lets you set up a whole website for your event with multiple pages, which is great for more complex events like Melbourne Global Game Jam.</p>
+              <p>The very first iteration of it was built for the 2015 game jam. At this time, it was basically a fancy website with a login system so jammers could access information. It wasn't called JamHost at this point and it didn't handle ticket registration or payments.</p>
+              <p>For the 2016 jam, I added support for it to accept payments and handle registrations directly rather than being imported from Eventbrite. I don't know specifically when I added on-site registration, but I suspect it was for the 2016.</p>
+              <p>For the 2017 jam, Luis and I ported it from the old PHP framework it was running on to C# and ASP.NET Core, and made it generic enough that any in-person game jam could use it. Thus it was given the name JamHost and provided as a public service:</p>
+              <img class="img-fluid rounded mb-3" style="border: solid 1px #ddd;" src="/history/img/jamhost1.png" title="A screenshot of JamHost back in 2018 from the Wayback Machine." alt="A screenshot of JamHost back in 2018 from the Wayback Machine." />
+              <p>Over the years JamHost kept getting improvements as we hosted more Melbourne Global Game Jam events, and kept getting updated as <a href="#jamcast">JamCast</a> evolved to work with JamHost.</p>
+              <p>For the 2023 game jam, JamHost was renamed to EventHost because the platform is now generic enough to host many kinds of events and not just game jams:</p>
+              <img class="img-fluid rounded mb-3" style="border: solid 1px #ddd;" src="/history/img/jamhost2.png" title="A screenshot of EventHost in 2023." alt="A screenshot of EventHost in 2023." />
+            </div>
+          </div>
           <div class="row my-3" x-type="event">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Jan</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="melbggj2017"></a><a href="https://globalgamejam.org/2017/jam-sites/melbourne-global-game-jam">Melbourne Global Game Jam</a></div>
@@ -1081,28 +1094,6 @@
             </div>
           </div>
           <div class="row my-3" x-type="opensource">
-            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Apr 2012 &raquo; Aug 2017</strong></div>
-            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="protogame"></a><a href="https://github.com/RedpointGames/Protogame">Protogame</a></div>
-            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
-            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
-              <p>Protogame was a game engine built on top of XNA/MonoGame. I worked with Andrew Brophy on a game called "Old Man Baby" at the <a href="https://twitter.com/molyjam" target="_blank">"What Would Molyduex?" game jam</a> that Harry Lee 尚倫 ran in 2012, and the code I wrote for that game became the basis for Protogame. Andrew Brophy later did a Flash remake of <a href="https://www.kongregate.com/games/AndrewBrophy/old-man-baby">"Old Man Baby" on Kongregate</a>.</p>
-              <img class="img-fluid rounded mb-3" src="/history/img/oldmanbaby.png" title="A screenshot from Old Man Baby, the project whose codebase eventually became Protogame." alt="A screenshot from Old Man Baby, the project whose codebase eventually became Protogame." />
-              <p>Protogame would go on to be used in no small number of projects that I developed, including Unearth (Tychaia), Minute of Mayhem and a decent chunk of the game jam games I worked on between 2012 and 2017.</p>
-              <p>By the time most of my development work moved to Unreal Engine, Protogame had an impressive feature set for an open source game engine. A full feature list is available on the <a href="https://github.com/RedpointGames/Protogame#features">can be found on the GitHub page for Protogame</a>, but to give you an idea, it supported 2D &amp; 3D games, deferred lighting, components and transform hierarchy, physics, networking with replication and a UI system.</p>
-              <p>Towards the latter part of it's lifecycle, I started working on editors, including an experimental integration into MonoDevelop, but the editors never reached full maturity before Protogame was retired:</p>
-              <div class="video-container my-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/RXZv6n4wb5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div class="video-container my-3">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TO7UxNKS5dQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <p>
-                Protogame also spawned a number of other open source projects, including Prototest, Protoinject and Protobuild, the latter of which was adopted upstream by MonoGame before it was eventually retirement in 2020.
-              </p>
-              <p>I stopped development on Protogame when we moved our projects to Unreal Engine.</p>
-            </div>
-          </div>
-          <div class="row my-3" x-type="opensource">
             <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Apr 2012 &raquo; Feb 2013</strong></div>
             <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="dcpu16"></a><a href="https://github.com/DCPUTeam/DCPUToolchain">DCPU-16 Toolchain</a></div>
             <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
@@ -1127,6 +1118,36 @@
               </ul>
               <p>I think the most interesting part of this project was implementing the linker; it gave me a hands on experience on how linkers really work for normal architectures, and why they are not able to produce useful error messages in a lot of cases.</p>
               <p>This project was effectively abandoned when Mojang cancelled the development of the game that it was being written for. I later worked on an open source game called <a href="#mir">Mir</a> which used the DCPU-16, but was cancelled after a month of development.</p>
+            </div>
+          </div>
+          <div class="row my-3" x-type="opensource">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar 2012 &raquo; Aug 2017</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="protogame"></a><a href="https://github.com/RedpointGames/Protogame">Protogame</a></div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Open Source Project</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>When I was writing the code for <a href="#oldmanbaby">Old Man Baby</a> at the "What Would Molyduex?" game jam, I ended up building useful primitives on top of XNA. This code would end up forming the initial version of Protogame, which would later move to MonoGame as XNA was retired.</p>
+              <p>It would go on to be used in no small number of projects that I developed, including Unearth (Tychaia), Minute of Mayhem and a decent chunk of the game jam games I worked on between 2012 and 2017.</p>
+              <p>By the time most of my development work moved to Unreal Engine, Protogame had an impressive feature set for an open source game engine. A full feature list is available on the <a href="https://github.com/RedpointGames/Protogame#features">can be found on the GitHub page for Protogame</a>. To give you an idea, it supported 2D &amp; 3D games, deferred lighting, components and transform hierarchy, physics, networking with replication and a UI system.</p>
+              <p>Towards the latter part of it's lifecycle, I started working on editors, including an experimental integration into MonoDevelop, but the editors never reached full maturity before development of Protogame ceased:</p>
+              <div class="video-container my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RXZv6n4wb5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="video-container my-3">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TO7UxNKS5dQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <p>
+                Protogame also spawned a number of other open source projects, including Prototest, Protoinject and Protobuild, the latter of which was adopted upstream by MonoGame before it was eventually retirement in 2020.
+              </p>
+              <p>I stopped development on Protogame when we moved our projects to Unreal Engine.</p>
+            </div>
+          </div>
+          <div class="row my-3" x-type="game">
+            <div class="col-lg-1 my-sm-2 my-lg-0 text-lg-start"><strong>Mar</strong></div>
+            <div class="col-lg-3 my-sm-1 my-lg-0 text-start"><a name="oldmanbaby"></a> Old Man Baby</div>
+            <div class="col-lg-2 my-sm-1 my-lg-0 text-start">Game Jam Game</div>
+            <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
+              <p>I worked with Andrew Brophy on a game called "Old Man Baby" at the <a href="https://twitter.com/molyjam" target="_blank">"What Would Molyduex?" game jam</a> that Harry Lee 尚倫 ran in 2012. The original that I wrote the code for is lost to time, but Andrew Brophy later did a Flash remake of <a href="https://www.kongregate.com/games/AndrewBrophy/old-man-baby">"Old Man Baby" on Kongregate</a> and from memory it's pretty close to the original:</p>
+              <img class="img-fluid rounded mb-3" src="/history/img/oldmanbaby.png" title="A screenshot from Old Man Baby, the project whose codebase eventually became Protogame." alt="A screenshot from Old Man Baby, the project whose codebase eventually became Protogame." />
             </div>
           </div>
           <div class="row my-3" x-type="opensource">
@@ -1285,7 +1306,7 @@
             <div class="col-lg-6 my-sm-1 my-lg-0 text-start">
               <p>The first version of JamCast was developed in 2010 during the first Melbourne Global Game Jam (see below). With game developers all in separate rooms, I wrote a version that captured bitmap images from developer desktops and sent them to the projectors in every room - the idea being to give people visibility on what other people were making throughout the jam. Keep in mind that in January 2010, Open Broadcaster Software hadn't even been released, let alone in wide use.</p>
               <p>At each Global Game Jam, it developed more features including Slack integration and pulling tweets from Twitter off a hashtag. I also had to adapt it to the unique networking setup of each event over the years, as Melbourne Global Game Jam has been hosted at La Trobe, Swinburne, AIE, JMC Academy and online during the COVID-19 pandemic.</p>
-              <p>Although there are a few open source iterations of JamCast floating around on the Internet, it is now stored in the same private Git repository as JamHost, since it is now tightly coupled to that online event platform. Hence this entry doesn't link to any of the open source implementations as they're all significantly out-of-date.</p>
+              <p>Although there are a few open source iterations of JamCast floating around on the Internet, it is now stored in the same private Git repository as <a href="#jamhost">JamHost</a>, since it is now tightly coupled to that online event platform. Hence this entry doesn't link to any of the open source implementations as they're all significantly out-of-date.</p>
               JamCast now uses Open Broadcaster Software under the hood and relays video streams via NGINX RTMP.
             </div>
           </div>
@@ -1505,8 +1526,6 @@
           <ul style="text-align: left;">
             <li>RoketPack</li>
             <li>Dx: Distributed Extensions for .NET</li>
-            <li>JamHost</li>
-            <li>What would Moly Duex game jam game with Andrew Brophy</li>
             <li>Phabricator work including the development of Harbormaster and Drydock</li>
             <li>Work done at PageUp People between 2013 and 2015</li>
             <li>Pivot game engine (never released)</li>
